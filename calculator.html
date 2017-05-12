@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="assets/css/jquery.slider.min.css" type="text/css">
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/selectize.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/css/bootstrap-slider.min.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+	<title>Suburb | Calculator</title>
+</head>
+
+<body class="page-search" id="page-top">
+	<!-- Preloader -->
+	<div id="page-preloader">
+		<div class="loader-ring"></div>
+		<div class="loader-ring2"></div>
+	</div>
+	<!-- End Preloader -->
+
+	<!-- Wrapper -->
+	<div class="wrapper">
+		<!-- Start Header -->
+		<div id="header"></div>
+		<!-- End Header -->
+
+		<!-- Page Content -->
+		<div id="page-content-search">
+			<div class="container">
+				<div class="wide_container_2">
+					<div class="col-xs-12 content_2">
+						<div class="col-lg-12 col-md-12">
+							<div class="wide-2">
+								<div class="container calc_wrap">
+									<div class="ttl_calc">Mortgage calculator for dubai & UAE</div>
+									<div class="col-lg-7 col-md-7">
+										<form id="calc_form">
+											<div class="form_item">
+												<div class="form_item_info">
+													<div class="name">Property Value</div>
+													<div class="value"><span id="ex1_val" class="val_count">40000 </span> AED</div>
+												</div>
+												<input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="250000" data-slider-step="1" data-slider-value="40000"/>
+											</div>
+											<div class="form_item">
+												<div class="form_item_info">
+													<div class="name">Loan Period</div>
+													<div class="value"><span id="ex2_val" class="val_count">12 </span> YR</div>
+												</div>
+												<input id="ex2" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="24" data-slider-step="1" data-slider-value="12"/>
+											</div>
+											<div class="form_item">
+												<div class="form_item_info">
+													<div class="name">Down payment</div>
+													<div class="value">
+														<div class="val_abs">25%</div>
+														<span id="ex3_val" class="val_count">0 </span> AED
+													</div>
+												</div>
+												<input id="ex3" data-slider-id='ex3Slider' type="text" data-slider-min="0" data-slider-max="65000" data-slider-step="1" data-slider-value="0"/>
+											</div>
+											<div class="form_item">
+												<div class="form_item_info">
+													<div class="name">Interest rate</div>
+													<div class="value"><span id="ex4_val" class="val_count">6 </span> %</div>
+												</div>
+												<input id="ex4" data-slider-id='ex4Slider' type="text" data-slider-min="0" data-slider-max="25" data-slider-step="0.01" data-slider-value="6"/>
+											</div>
+										</form>
+									</div>
+									<div class="col-lg-5 col-md-5">
+										<div class="final_cost_wrap">
+											<div class="ttl_cost">Approximate cost is <span>1,984</span> AED/mont</div>
+											<div class="cost_line">
+												<div class="principle">
+													<div class="fnl_item_count">
+														<div class="fnl_prs itm1">1,412 AED</div>
+														<span>Principle</span>
+													</div>
+												</div>
+												<div class="interest">
+													<div class="fnl_item_count">
+														<div class="fnl_prs itm2">572 AED</div>
+														<span>Interest</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="quest_list">
+											<div class="quest_ttl">Frequently Asked Questions</div>
+											<ul>
+												<li><a href="javascript:void(0)">What is mortgage?</a></li>
+												<li><a href="javascript:void(0)">Whow much can i borrow?</a></li>
+												<li><a href="javascript:void(0)">Who qualifiles for a mortgage in the UAE?</a></li>
+												<li><a href="javascript:void(0)">How cann the Mortgage Calculator help me?</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end wide-2 -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end Page Content -->
+
+	<!-- Start Footer -->
+	<div id="footer"></div>
+	<!-- End Footer -->
+
+	<!-- Modal login, register, custom gallery -->
+	<div id="login-modal-open"></div>
+	<div id="register-modal-open"></div>
+	<div class="custom-galery">
+		<input type="checkbox" class="gal" id="op">
+		<div class="lower"></div>
+		<div class="overlay overlay-hugeinc">
+			<label for="op"></label>
+			<nav>
+				<!-- Owl carousel -->
+				<div class="owl-carousel owl-theme carousel-full-width owl-demo-3">
+					<div class="item" style="background-image: url(http://placehold.it/950X800);"></div>
+					<div class="item" style="background-image: url(http://placehold.it/800X650);"></div>
+				</div>
+				<!-- End Owl carousel -->
+			</nav>
+		</div>
+	</div>
+	<!-- End Modal login, register, custom gallery -->
+
+	<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="assets/js/retina-1.1.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/masonry.pkgd.min.js"></script>
+	<script type="text/javascript" src="assets/js/selectize.min.js"></script>
+	<script type="text/javascript" src="assets/js/tmpl.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.dependClass-0.1.js"></script>
+	<script type="text/javascript" src="assets/js/draggable-0.1.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.slider.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/bootstrap-slider.min.js"></script>
+
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+	<script>
+		var slider = new Slider('#ex1');
+		slider.on("slide", function(sliderValue) {
+		    document.getElementById("ex1_val").textContent = sliderValue;
+		});
+		var slider2 = new Slider('#ex2');
+		slider2.on("slide", function(sliderValue) {
+		    document.getElementById("ex2_val").textContent = sliderValue;
+		});
+		var slider3 = new Slider('#ex3');
+		slider3.on("slide", function(sliderValue) {
+		    document.getElementById("ex3_val").textContent = sliderValue;
+		});
+		var slider4 = new Slider('#ex4');
+		slider4.on("slide", function(sliderValue) {
+		    document.getElementById("ex4_val").textContent = sliderValue;
+		});
+	</script>
+	<!--[if gt IE 8]>
+	<script type="text/javascript" src="assets/js/ie.js"></script>
+	<![endif]-->
+</body>
+</html>
+

@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="assets/css/jquery.slider.min.css" type="text/css">
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/selectize.css" type="text/css">
+	<title>Suburb | Agency Profile</title>
+</head>
+
+<body class="page-agency" id="page-top">
+<!-- Preloader -->
+<div id="page-preloader">
+	<div class="loader-ring"></div>
+	<div class="loader-ring2"></div>
+</div>
+<!-- End Preloader -->
+
+<!-- Wrapper -->
+<div class="wrapper">
+	<!-- Start Header -->
+	<div id="header"></div>
+	<!-- End Header -->
+
+	<!-- Page Content -->
+	<div id="page-content-agent" class="s_admin">
+		<div class="container">
+			<ol class="breadcrumb">
+				<li><a href="index_v_1.html">Home</a></li>
+				<li class="active">Agency panel</li>
+			</ol>
+		</div>
+		<div class="container s_admin__box">
+			<header class="header ">
+				<h2>Agency panel</h2>
+			</header>
+			<!--TAB-->
+			<ul id="tabs" class="nav nav-tabs tabs-bh s_admin__box_top" data-tabs="tabs">
+				<li class="active">
+					<a id="agency_click" href="#ag_details" data-toggle="tab">
+						<span class="img-tab">Agency Details</span>
+					</a>
+				</li>
+				<li>
+					<a href="#prop_details" data-toggle="tab">
+						<span class="img-tab">Add/Edit Property Details</span>
+					</a>
+				</li>
+				<li>
+					<a href="#my_prop" data-toggle="tab">
+						<span class="img-tab">My Properties</span>
+					</a>
+				</li>
+				<li>
+					<a href="#marketing" data-toggle="tab">
+						<span class="img-tab">Marketing Dashboard</span>
+					</a>
+				</li>
+			</ul>
+
+			<div id="my-tab-content" class="tab-content s_admin__box_content">
+
+				<!--~Agencie Details~-->
+				<div id="ag_details" class="tab-pane fade active in">
+					<!--dop tab-->
+					<div class="s_admin__box_content_tab">
+						<ul id="tabs2" class="nav nav-tabs tabs-bh" data-tabs="tabs">
+							<li class="s_admin__box_content_tabe  _width _helper_for_show_select active">
+								<a href="#agency_det" data-toggle="tab">
+									<span>Agency details</span>
+								</a>
+							</li>
+							<li class="s_admin__box_content_tabe _width _helper_for_hide_select">
+								<a href="#agency_pass_2" data-toggle="tab">
+									<span>Passwords and users</span>
+								</a>
+							</li>
+						</ul>
+						<div class="s_admin__box_content_tab_button">
+							<button type="submit" class="upd_dtl">Update Details</button>
+						</div>
+					</div>
+					<!--Content tabs-->
+					<div class="s_admin__box_content_tabs">
+						<!--Content tabs-->
+						<div id="agency_det" class="s_admin__box_content_tabcont form_details active">
+							<div class="form_details_section col-md-6 col-sm-12">
+								<div class="form-inline">
+									<div class="row">
+										<label class="col-md-4 col-sm-3">Agency Name</label>
+										<div class="optic col-md-7 col-sm-6">
+											<input type="text" class="form-control" placeholder="Enter Agency Name">
+										</div>
+									</div>
+								</div>
+								<div class="form-inline">
+									<div class="row">
+										<label class="col-md-4 col-sm-3">User Login Email</label>
+										<div class="optic col-md-7 col-sm-6">
+											<input type="email" class="form-control" placeholder="Enter user Login Email">
+										</div>
+									</div>
+								</div>
+								<div class="form-inline">
+									<div class="row">
+										<label class="col-md-4 col-sm-3">Website:</label>
+										<div class="optic col-md-7 col-sm-6">
+											<input type="url" class="form-control" placeholder="Enter your Website">
+										</div>
+									</div>
+								</div>
+								<div class="form-inline">
+									<div class="row">
+										<label class="col-md-4 col-sm-3">Profile Email:</label>
+										<div class="optic col-md-7 col-sm-6">
+											<input type="url" class="form-control" placeholder="Enter Agency contact email">
+										</div>
+									</div>
+								</div>
+								<div class="form-inline">
+									<div class="row">
+										<label class="col-md-4 col-sm-3">Agency Description:</label>
+										<div class="optic col-md-7 col-sm-6">
+											<input type="text" class="form-control" placeholder="Enter Agency Description">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_details_section col-md-6 col-sm-12">
+								<div class="form-inline">
+									<div class="row">
+										<label class="col-md-offset-1 col-md-4 col-sm-3">User Contact Number</label>
+										<div class="optic col-md-7 col-sm-6">
+											<input type="tel" class="form-control" placeholder="Enter user Contact Number">
+										</div>
+									</div>
+								</div>
+								<div class="form-inline">
+									<div class="row">
+										<label class="col-md-offset-1 col-md-4 col-sm-3">Agency I.D</label>
+										<div class="optic col-md-7 col-sm-6">
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="form-inline">
+									<div class="row">
+										<label class="col-md-offset-1 col-md-4 col-sm-3">Agency Licence:</label>
+										<div class="optic col-md-7 col-sm-6">
+											<input type="text" class="form-control" placeholder="Enter Agency Licence">
+										</div>
+									</div>
+								</div>
+								<div class="form-inline">
+									<div class="row">
+										<label class="col-md-offset-1 col-md-4 col-sm-3">Profile Number:</label>
+										<div class="optic col-md-7 col-sm-6">
+											<input type="tel" class="form-control" placeholder="Enter Agency contact number">
+										</div>
+									</div>
+								</div>
+								<div class="form-inline">
+									<div class="row">
+										<label class="col-md-offset-1 col-md-4 col-sm-3 col-xs-3">
+										Upload logo:</label>
+										<label class="upload_btn col-md-4 col-xs-4" for="file-upload">
+											Browser folder<img src="assets/img/upload_2.png" alt="" class="image-upload-icon">
+										</label>
+										<div class="upload_img col-md-3 col-xs-4">
+											<input id="file-upload" type="file" class="file" required multiple data-show-upload="false" data-show-caption="false" data-show-remove="false" accept="image/jpeg,image/png" data-browse-class="btn btn-default" data-browse-label="Add Files">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form_details_btn col-md-offset-8 col-md-4 col-xs-12">
+								<div class="form_details_btn_inblock">
+									<a href="javascrotp:void(0)" class="main_link call_l   col-md-12">Listings (1,267)</a>
+								</div>
+								<div class="form_details_btn_inblock">
+									<a href="javascrotp:void(0)" class="main_link call_l col-md-12 ">Verified (YES)</a>
+								</div>
+							</div>
+							<br>
+						</div>
+						<!--agency pass-->
+						<div id="agency_pass_2" class="s_admin__box_content_tabcont">
+							<div class="s_admin__box_content_pas-use">
+								<form id="form-account-profile" method="post">
+									<div class="s_admin__box_content_pas-use_block col-xs-12">
+										<div class="col-md-3 col-sm-6  col-xs-12 s_admin__box_content_pas-use_block_inp">
+											<label>Master Email</label>
+											<input type="email" class="form-control inpt_item inp_adress" placeholder="Enter your Email Adress">
+										</div>
+										<div class="col-md-3 col-sm-6  col-xs-12 s_admin__box_content_pas-use_block_inp">
+											<label>Password</label>
+											<input type="password" class="form-control inpt_item" id="form-account-password-current" name="form-account-password-current" placeholder="Enter your Password">
+										</div>
+										<div class="col-md-3 col-sm-6  col-xs-12 s_admin__box_content_pas-use_block_inp">
+											<label>Confirm Password</label>
+											<input type="password" class="form-control inpt_item" id="form-account-password-current" placeholder="Enter your Confirm Password" name="form-account-password-current">
+										</div>
+										<div class="col-md-3 col-sm-6  col-xs-11 s_admin__box_content_pas-use_block_inp">
+											<label>Permissions</label>
+											<select class="selection">
+												<option>Allow Edit</option>
+												<option>NOT Allow Edit</option>
+											</select>
+										</div>
+										<div class="s_admin__box_content_pas-use__del">&times;</div>
+									<hr>
+									</div>
+									<div class="s_admin__box_content_pas-use_block col-xs-12">
+										<div class="col-md-3 col-sm-6  col-xs-12 s_admin__box_content_pas-use_block_inp">
+											<label>Email</label>
+											<input type="email" class="form-control inpt_item inp_adress" placeholder="Enter your Email Adress">
+										</div>
+										<div class="col-md-3 col-sm-6  col-xs-12 s_admin__box_content_pas-use_block_inp">
+											<label>Password</label>
+											<input type="password" class="form-control inpt_item" id="form-account-password-current" name="form-account-password-current" placeholder="Enter your Password">
+										</div>
+										<div class="col-md-3 col-sm-6  col-xs-12 s_admin__box_content_pas-use_block_inp">
+											<label>Confirm Password</label>
+											<input type="password" class="form-control inpt_item" id="form-account-password-current" placeholder="Enter your Confirm Password" name="form-account-password-current">
+										</div>
+										<div class="col-md-3 col-sm-6  col-xs-11 s_admin__box_content_pas-use_block_inp">
+											<label>Permissions</label>
+											<select class="selection">
+												<option>Allow Edit</option>
+												<option>NOT Allow Edit</option>
+											</select>
+										</div>
+										<div class="s_admin__box_content_pas-use__del">&times;</div>
+									<hr>
+									</div>
+									<div class="s_admin__box_content_pas-use_block col-xs-12">
+										<div class="col-md-3 col-sm-6  col-xs-12 s_admin__box_content_pas-use_block_inp">
+											<label>Email</label>
+											<input type="email" class="form-control inpt_item inp_adress" placeholder="Enter your Email Adress">
+										</div>
+										<div class="col-md-3 col-sm-6  col-xs-12 s_admin__box_content_pas-use_block_inp">
+											<label>Password</label>
+											<input type="password" class="form-control inpt_item" id="form-account-password-current" name="form-account-password-current" placeholder="Enter your Password">
+										</div>
+										<div class="col-md-3 col-sm-6  col-xs-12 s_admin__box_content_pas-use_block_inp">
+											<label>Confirm Password</label>
+											<input type="password" class="form-control inpt_item" id="form-account-password-current" placeholder="Enter your Confirm Password" name="form-account-password-current">
+										</div>
+										<div class="col-md-3 col-sm-6  col-xs-11 s_admin__box_content_pas-use_block_inp">
+											<label>Permissions</label>
+											<select class="selection">
+												<option>Allow Edit</option>
+												<option>NOT Allow Edit</option>
+											</select>
+										</div>
+										<div class="s_admin__box_content_pas-use__del">&times;</div>
+									</div>
+									<div class="s_admin__box_content_pas-use_btn col-xs-12">
+										<button type="submit">Add new User</button>
+									</div>
+									<br>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--~Add/Edit Property Details~-->
+				<div id="prop_details" class="tab-pane fade">
+					<!--dop tab-->
+					<div class="s_admin__box_content_tab">
+						<div class="s_admin__box_content_tab_a">
+							<a href="">Required fields before listing can be published</a>
+						</div>
+						<div class="s_admin__box_content_tab_button">
+							<p class="s_admin__xml"><span>Automatic</span> XML Mode</p>
+							<input id="file-upl" type="file" class="file" required data-show-upload="false" data-show-caption="false" data-show-remove="false" data-browse-class="btn btn-default" data-browse-label="Add Files">
+							<button type="submit" class="upd_dtl">Update Details</button>
+							<select class="selection">
+								<option>Extend 3 Month</option>
+								<option>Expire Listing</option>
+								<option>Delete Listing</option>
+							</select>
+						</div>
+					</div>
+					<!--Content tab-->
+					<div class="s_admin__box_content_tabs form_control">
+						<div class="container">
+							<div class="row">
+								<div class="form_control_prt col-xs-12">
+									<div class="form-group">
+										<label>Property Title</label>
+										<input type="text" class="form-control" placeholder="Max 50 characters" required>
+									</div>
+								</div>
+								<div class="form_control_prt col-xs-12">
+									<div class="form-group">
+										<label>Property Description</label>
+										<input type="text" class="form-control" placeholder="Max 1000 characters" required>
+									</div>
+								</div>
+								<div class="form_control_prt col-xs-12">
+									<div class="form-group">
+										<label for="pac-input">Adresss</label>
+										<div class="local" style="display: flex">
+											<input id="pac-input_2" type="text" class="form-control map_input" placeholder="Limassol, Agios Tychonas, Amathountos Street">
+											<i class="fa fa-search"></i>
+											<div class="btn_position">Get My Position</div>
+										</div>
+									</div>
+								</div>
+								<div class="map">
+									<h4>Double Click on map to PIN the location</h4>
+									<div id="map_2"></div>
+								</div>
+								<div class="form_control_prt pad col-xs-12">
+									<div class="form-group col-xs-12 col-sm-3 col-md-2">
+										<label>Type</label>
+										<select class="selection">
+											<option>Choose Type</option>
+											<option>Apartment</option>
+											<option>Condominium</option>
+											<option>Cottage</option>
+										</select>
+									</div>
+									<div class="form-group col-xs-12 col-sm-3 col-md-2">
+										<label>Price in EUR</label>
+										<input type="numb" class="form-control" placeholder="Selling Price" required>
+									</div>
+									<div class="form-group col-xs-12 col-sm-3 col-md-2">
+										<label>Beds</label>
+										<input type="text" class="form-control" placeholder="Type number of beds" required>
+									</div>
+									<div class="form-group col-xs-12 col-sm-3 col-md-2">
+										<label>Covered area m<sup>2</sup></label>
+										<input type="numb" class="form-control" placeholder="Type size" required>
+									</div>
+									<div class="form-group featured-image-block col-xs-12 col-md-4">
+										<label class="col-xs-12">Upload photos</label>
+										<label class="featured-image-block_btn col-xs-6 col-sm-3 col-md-7" for="file-load">
+											Choose files<img src="assets/img/upload_2.png" alt="" class="image-upload-icon">
+										</label>
+										<input id="file-load" type="file" class="file" required multiple data-show-upload="false" data-show-caption="false" data-show-remove="false" accept="image/jpeg,image/png" data-browse-class="btn btn-default" data-browse-label="Add Files">
+									</div>
+								</div>
+								<div class="form_control_prt pad col-md-12 col-xs-12">
+									<div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Agent contact name</label>
+										<input type="text" class="form-control" placeholder="Type name" required>
+									</div>
+									<div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Contact Number</label>
+										<input type="text" class="form-control" placeholder="Type number" required>
+									</div>
+									<div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Contact email</label>
+										<input type="text" class="form-control" placeholder="Type email" required>
+									</div>
+									<div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Agency Property ID</label>
+										<input type="text" class="form-control" placeholder="Type property ID" required>
+									</div>
+								</div>
+								<div class="form_control_prt pad col-md-12 col-xs-12">
+									<h3>Additional fields</h3>
+									<div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Parking</label>
+										<select class="selection">
+											<option>Yes</option>
+											<option>No</option>
+										</select>
+									</div>
+									<div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Garden</label>
+										<select class="selection">
+											<option>Yes</option>
+											<option>No</option>
+										</select>
+									</div>
+									<div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Furnished</label>
+										<select class="selection">
+											<option>Yes</option>
+											<option>No</option>
+										</select>
+									</div>
+									<div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Swimming pool</label>
+										<select class="selection">
+											<option>Yes</option>
+											<option>No</option>
+										</select>
+									</div>
+									<div class="addition">
+										<div class="input-additional">+add property features</div>
+									</div>
+								</div>
+								<div class="form_control_prt pad col-md-12 col-xs-12">
+									<h3>Listings Status</h3>
+									<div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Listing Live</label>
+										<input type="text" class="form-control" disabled>
+									</div>
+									<div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Listing Expiry</label>
+										<input type="text" class="form-control" disabled>
+									</div>
+									<div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Featured</label>
+										<input type="text" class="form-control" disabled>
+									</div>
+									<div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Featured expiry</label>
+										<input type="text" class="form-control" disabled>
+									</div>
+									<div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Akinido property I.D</label>
+										<input type="text" class="form-control" disabled>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--~My Properties~-->
+				<div id="my_prop" class="tab-pane fade">
+					<!--dop tab-->
+					<div class="s_admin__box_content_tab flex-end">
+						<div class="s_admin__box_content_tab_button">
+							<button type="submit" class="upd_dtl">Update Details</button>
+							<select class="selection">
+								<option>Extend 3 Month</option>
+								<option>Expire Listing</option>
+								<option>Delete Listing</option>
+							</select>
+							<div class="checkbox">
+								<label><input type="checkbox"><span>Select All</span></label>
+							</div>
+						</div>
+					</div>
+					<!--Content tabs-->
+					<div class="s_admin__box_content_tabs">
+						<!--filter-->
+						<div class="col-md-12 col-xs-12 no-pad s_admin__box_content_filter">
+							<div class="location-map col-md-2 col-sm-9 col-xs-12">
+								<div class="input-group">
+									<input type="text" class="form-control" id="address-map" name="address" placeholder="Limassol, Cyprus">
+									<i class="fa fa-search"></i>
+								</div>
+							</div>
+							<div class="col-md-8 col-sm-12 col-xs-12 pad">
+								<div class="select-block bor col-md-2 col-sm-2 col-xs-4">
+									<select class="selection">
+										<option>Type</option>
+										<option>Any</option>
+										<option>Apartment</option>
+										<option>House</option>
+										<option>Land</option>
+										<option>Industrial</option>
+										<option>Commercial</option>
+									</select>
+								</div>
+								<div class="col-sm-3 pad">
+									<div class="select-block bor col-md-6 col-sm-6 col-xs-4">
+										<select class="selection">
+											<option>Beds</option>
+											<option>Any</option>
+											<option>1+</option>
+											<option>2+</option>
+											<option>3+</option>
+											<option>4+</option>
+											<option>5+</option>
+										</select>
+									</div>
+									<div class="select-block bor _none col-md-6 col-sm-6 col-xs-4">
+										<a class="options-button" id="toggle-link">More</a>
+									</div>
+									<div class="options-overlay" id="hidden_content" style="display: none;">
+										<div class="row">
+											<div class="col-xs-6 top-mrg">
+												<div class="internal-container features">
+													<div class="form-group">
+														<label>Search Keyword</label>
+														<input type="text" class="form-control" placeholder="Type keyword">
+													</div>
+													<div class="form-group">
+														<label>Maximum price per m<sup>2</sup></label>
+														<input type="text" class="form-control" placeholder="Enter an Amount">
+													</div>
+												</div>
+											</div>
+											<div class="col-xs-6 top-mrg">
+												<div class="internal-container features">
+													<div class="form-group">
+														<label>Minimum covered area m<sup>2</sup></label>
+														<input type="text" class="form-control" placeholder="Enter an Amount">
+													</div>
+													<label>Construction:</label>
+													<section class="block">
+														<section>
+															<ul class="submit-features">
+																<li><div class="checkbox"><label><input type="checkbox">All</label></div></li>
+																<li><div class="checkbox"><label><input type="checkbox">New Build</label></div></li>
+															</ul>
+														</section>
+													</section>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="select-block bor col-md-2 col-sm-2 col-xs-6">
+									<select class="selection">
+										<option>Status</option>
+										<option>All</option>
+										<option>Live</option>
+										<option>Featured</option>
+										<option>Not live</option>
+									</select>
+								</div>
+								<div class="select-block bor _none _drop col-md-2 col-sm-2 col-xs-6">
+									<select class="selection">
+										<option>Sort by</option>
+										<option>Most recently added Listing</option>
+										<option>Most Recent Listing Expiry </option>
+										<option>Most Recent Featured Expiry </option>
+										<option>Most Hits</option>
+										<option>Max Price</option>
+										<option>Min Price</option>
+										<option>Max Price Per Square Meter</option>
+										<option>Min Price Per Square Meter</option>
+										<option>Max Square Meter</option>
+										<option>Min Square Meter </option>
+									</select>
+								</div>
+								<div class="agency-id bor _none col-md-3 col-sm-3 col-xs-12">
+									<div class="input-group">
+										<input type="text" class="form-control" id="agency-id" name="address" placeholder="Search property ID">
+										<i class="fa fa-search"></i>
+									</div>
+								</div>
+							</div>
+							<div class="s_label col-md-2 col-sm-3 col-xs-12">
+								<div class="s_label_right">
+									<span class="txt">Total Listings</span>
+									<span class="nb">14,444</span>
+								</div>
+								<div class="s_label_right">
+									<span class="txt">Total Hits</span>
+									<span class="nb">99</span>
+								</div>
+							</div>
+						</div>
+						<!--slider-->
+						<div class="s_admin__box_content_slider col-xs-12">
+							<form method="post">
+								<div class="s_admin__box_content_slider_p col-md-2 col-sm-3">
+									<div class="form-inline">
+										<label class="price-range">Price Range:</label>
+									</div>
+								</div>
+								<div class="s_admin__box_content_slider_p col-md-10 col-sm-7">
+									<div class="form-group">
+										<div class="price-range">
+											<input class="price-input" type="text" name="price" value="0;5000000">
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!--content-->
+						<div class="wide-2 s_admin__box_content_wind">
+								<div class="row white prop_itm">
+									<div class="col-md-3 col-sm-3 prp-img">
+										<div class="exp-img-2" style="background:url(http://placehold.it/255x200) center;background-size: cover;">
+											<span class="filter"></span>
+											<span class="ffs-bs"><label for="op" class="btn btn-small btn-primary">browse photos</label></span>
+											<div class="overlay">
+												<div class="img-counter">23 Photo</div>
+											</div>
+										</div>
+									</div>
+									<div class="item-info col-lg-7 col-md-6 col-sm-6">
+										<h4>
+											<a href="property_page.html">AVA High Line 89 - 916 Apartments</a>
+											<a href="javascript:void(0)" class="id_">
+											<h5>ID: FR</h5></a>
+											<a href="javascript:void(0)" class="comp_logo"><img src="assets/img/fox-min.png" alt=""></a>
+										</h4>
+										<p class="team-color">525 W 28th St, New York, NY 10001</p>
+										<div class="block">
+											<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+												<img src="assets/img/bedroom.png" alt="">
+												<p class="info-line">3 Bedrooms</p>
+											</div>
+											<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+												<img src="assets/img/bathroom.png" alt="">
+												<p class="info-line">1 Bathroom</p>
+											</div>
+											<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+												<img src="assets/img/square.png" alt="">
+												<p class="info-line">100 m<span class="rank">2</span></p>
+											</div>
+											<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+												<img src="assets/img/garage.png" alt="">
+												<p class="info-line">1 Garage</p>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3 line"></div>
+										<div class="col-md-3 col-sm-3 col-xs-3 line"></div>
+										<div class="col-md-3 col-sm-3 col-xs-3 line"></div>
+										<div class="col-md-3 col-sm-3 col-xs-3 line"></div>
+										<hr>
+										<p>Aenean quis sem nisi. Aliquam vehicula gravida orci, nec pretium mi ultricies in. Donec fermentum pulvinar mauris neque justo ...</p>
+									</div>
+									<div class="item-price_btn col-lg-2 col-md-3 col-sm-3 col-xs-12">
+										<a href="javascrotp:void(0)" class="main_link call_l col-sm-12 col-xs-2">Hits(99)</a>
+										<div class="col-sm-12 col-sm-offset-0 col-xs-9 col-xs-offset-1 pad">
+											<div class="exp col-sm-12 col-xs-12">
+												<label>Exp:</label>
+												<p class="exp_data">
+													<time>31/12/17</time>
+												</p>
+											</div>
+											<div class="exp _feature col-sm-12 col-xs-12">
+												<label>Feature Exp:</label>
+												<p class="exp_data">
+													<time>31/06/17</time>
+												</p>
+											</div>
+											<div class="checkbox col-sm-12 col-xs-12">
+												<label><input type="checkbox"></label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row white prop_itm">
+									<div class="col-md-3 col-sm-3 prp-img">
+										<div class="exp-img-2" style="background:url(http://placehold.it/255x200) center;background-size: cover;">
+											<span class="filter"></span>
+											<span class="ffs-bs"><label for="op" class="btn btn-small btn-primary">browse photos</label></span>
+											<div class="overlay">
+												<div class="img-counter">23 Photo</div>
+											</div>
+										</div>
+									</div>
+									<div class="item-info col-lg-7 col-md-6 col-sm-6">
+										<h4>
+											<a href="property_page.html">AVA High Line 89 - 916 Apartments</a>
+											<a href="javascript:void(0)" class="id_">
+											<h5>ID: FR</h5></a>
+											<a href="javascript:void(0)" class="comp_logo"><img src="assets/img/fox-min.png" alt=""></a>
+										</h4>
+										<p class="team-color">525 W 28th St, New York, NY 10001</p>
+										<div class="block">
+											<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+												<img src="assets/img/bedroom.png" alt="">
+												<p class="info-line">3 Bedrooms</p>
+											</div>
+											<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+												<img src="assets/img/bathroom.png" alt="">
+												<p class="info-line">1 Bathroom</p>
+											</div>
+											<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+												<img src="assets/img/square.png" alt="">
+												<p class="info-line">100 m<span class="rank">2</span></p>
+											</div>
+											<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+												<img src="assets/img/garage.png" alt="">
+												<p class="info-line">1 Garage</p>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3 line"></div>
+										<div class="col-md-3 col-sm-3 col-xs-3 line"></div>
+										<div class="col-md-3 col-sm-3 col-xs-3 line"></div>
+										<div class="col-md-3 col-sm-3 col-xs-3 line"></div>
+										<hr>
+										<p>Aenean quis sem nisi. Aliquam vehicula gravida orci, nec pretium mi ultricies in. Donec fermentum pulvinar mauris neque justo ...</p>
+									</div>
+									<div class="item-price_btn col-lg-2 col-md-3 col-sm-3 col-xs-12">
+										<a href="javascrotp:void(0)" class="main_link call_l col-sm-12 col-xs-2">Hits(99)</a>
+										<div class="col-sm-12 col-sm-offset-0 col-xs-9 col-xs-offset-1 pad">
+											<div class="exp col-sm-12 col-xs-12">
+												<label>Exp:</label>
+												<p class="exp_data">
+													<time>31/12/17</time>
+												</p>
+											</div>
+											<div class="exp _feature col-sm-12 col-xs-12">
+												<label>Feature Exp:</label>
+												<p class="exp_data">
+													<time>31/06/17</time>
+												</p>
+											</div>
+											<div class="checkbox col-sm-12 col-xs-12">
+												<label><input type="checkbox"></label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row white prop_itm">
+									<div class="col-md-3 col-sm-3 prp-img">
+										<div class="exp-img-2" style="background:url(http://placehold.it/255x200) center;background-size: cover;">
+											<span class="filter"></span>
+											<span class="ffs-bs"><label for="op" class="btn btn-small btn-primary">browse photos</label></span>
+											<div class="overlay">
+												<div class="img-counter">23 Photo</div>
+											</div>
+										</div>
+									</div>
+									<div class="item-info col-lg-7 col-md-6 col-sm-6">
+										<h4>
+											<a href="property_page.html">AVA High Line 89 - 916 Apartments</a>
+											<a href="javascript:void(0)" class="id_">
+											<h5>ID: FR</h5></a>
+											<a href="javascript:void(0)" class="comp_logo"><img src="assets/img/fox-min.png" alt=""></a>
+										</h4>
+										<p class="team-color">525 W 28th St, New York, NY 10001</p>
+										<div class="block">
+											<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+												<img src="assets/img/bedroom.png" alt="">
+												<p class="info-line">3 Bedrooms</p>
+											</div>
+											<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+												<img src="assets/img/bathroom.png" alt="">
+												<p class="info-line">1 Bathroom</p>
+											</div>
+											<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+												<img src="assets/img/square.png" alt="">
+												<p class="info-line">100 m<span class="rank">2</span></p>
+											</div>
+											<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+												<img src="assets/img/garage.png" alt="">
+												<p class="info-line">1 Garage</p>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3 line"></div>
+										<div class="col-md-3 col-sm-3 col-xs-3 line"></div>
+										<div class="col-md-3 col-sm-3 col-xs-3 line"></div>
+										<div class="col-md-3 col-sm-3 col-xs-3 line"></div>
+										<hr>
+										<p>Aenean quis sem nisi. Aliquam vehicula gravida orci, nec pretium mi ultricies in. Donec fermentum pulvinar mauris neque justo ...</p>
+									</div>
+									<div class="item-price_btn col-lg-2 col-md-3 col-sm-3 col-xs-12">
+										<a href="javascrotp:void(0)" class="main_link call_l col-sm-12 col-xs-2">Hits(99)</a>
+										<div class="col-sm-12 col-sm-offset-0 col-xs-9 col-xs-offset-1 pad">
+											<div class="exp col-sm-12 col-xs-12">
+												<label>Exp:</label>
+												<p class="exp_data">
+													<time>31/12/17</time>
+												</p>
+											</div>
+											<div class="exp _feature col-sm-12 col-xs-12">
+												<label>Feature Exp:</label>
+												<p class="exp_data">
+													<time>31/06/17</time>
+												</p>
+											</div>
+											<div class="checkbox col-sm-12 col-xs-12">
+												<label><input type="checkbox"></label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+					</div>
+				</div>
+				<!--~Marketing Dashboard~-->
+				<div id="marketing" class="tab-pane fade">
+					<!--dop tab-->
+					<div class="s_admin__box_content_tab flex-end">
+						<div class="s_admin__box_content_tab_button">
+							<small>From: </small>
+							<div class="bfh-datepicker mar0" data-format="d.m.y" placeholder="Choose Date Range" data-close="true">
+							</div>
+							<small>To:</small>
+							<div class="bfh-datepicker mar0" data-format="d.m.y" placeholder="Choose Date Range" data-close="true">
+							</div>
+							<a class="download" href="#" download><img src="assets/img/xlsx-file-format-extension.png" alt="">Export Excel</a>
+						</div>
+					</div>
+					<!--Content tabs-->
+					<div class="s_admin__box_content_tabs">
+						<div class="s_admin__box_content_tabcont active">
+							<div class="s_admin__box_content_tetragons _tabs">
+								<div class="tetragon col-xs-12 col-sm-4 _current">
+									<img src="assets/img/icon/phone-call.png" alt="">
+									<div class='fill'>
+										<h1>99</h1>
+										<p>Total click to Call</p>
+									</div>
+								</div>
+								<div class="tetragon col-xs-12 col-sm-4">
+									<img src="assets/img/icon/envelope.png" alt="">
+									<div class='fill'>
+										<h1>138</h1>
+										<p>Total Emails</p>
+									</div>
+								</div>
+								<div class="tetragon col-xs-12 col-sm-4">
+									<img src="assets/img/icon/dart-hitting-board-target.png" alt="">
+									<div class='fill'>
+										<h1>2002</h1>
+										<p>Total Views</p>
+									</div>
+								</div>
+							</div>
+							<div class="s_admin__box_content_tables">
+								<div class="s_admin__box_content_table _current">
+									<p></p>
+									<table id="myTable" class="tablesorter">
+									  <thead>
+										  <tr>
+											<th>Property I.D</th>
+											<th>Category</th>
+											<th>Type</th>
+											<th>Covered area m<sup>2</sup></th>
+											<th>Price EUR</th>
+											<th>Property Views</th>
+											<th>Clicks to Call</th>
+											<th>Emails</th>
+											<th>Conversion Rate %</th>
+										  </tr>
+									  </thead>
+									  <tbody>
+										  <tr>
+											<td>83746</td>
+											<td>For Rent</td>
+											<td>Apartment</td>
+											<td>99</td>
+											<td>1250 <sup>p/d</sup></td>
+											<td>989</td>
+											<td>14</td>
+											<td>44</td>
+											<td>6,7%</td>
+										  </tr>
+										  <tr>
+											<td>83746</td>
+											<td>For Sale</td>
+											<td>House</td>
+											<td>99</td>
+											<td>201,000</td>
+											<td>989</td>
+											<td>14</td>
+											<td>44</td>
+											<td>6,7%</td>
+										  </tr>
+									  </tbody>
+									</table>
+								</div>
+								<div class="s_admin__box_content_table">
+									<table id="myTable" class="tablesorter">
+									  <thead>
+										  <tr>
+											<th>Email</th>
+											<th>Phone</th>
+											<th>Property I.D</th>
+											<th>Category</th>
+											<th>Type</th>
+											<th>Covered area m<sup>2</sup></th>
+											<th>Price EUR</th>
+											<th>Message</th>
+										  </tr>
+									  </thead>
+									  <tbody>
+										  <tr>
+											<td>markos.solomu@gmail.com</td>
+											<td>+357 99 405 746</td>
+											<td>1</td>
+											<td>For Sale</td>
+											<td>House</td>
+											<td>54</td>
+											<td>320,000</td>
+											<td>Please contact me re..</td>
+										  </tr>
+										  <tr>
+											<td>markos.solomu@gmail.com</td>
+											<td>+357 99 405 746</td>
+											<td>1</td>
+											<td>For Sale</td>
+											<td>House</td>
+											<td>54</td>
+											<td>320,000</td>
+											<td>Please contact me re..</td>
+										  </tr>
+									  </tbody>
+									</table>
+								</div>
+								<div class="s_admin__box_content_table">
+									<table id="myTable" class="tablesorter">
+									  <thead>
+										  <tr>
+											<th>Property I.D</th>
+											<th>Category</th>
+											<th>Type</th>
+											<th>Covered area m<sup>2</sup></th>
+											<th>Price EUR</th>
+											<th>Property Views</th>
+											<th>Clicks to Call</th>
+											<th>Emails</th>
+											<th>Conversion Rate %</th>
+										  </tr>
+									  </thead>
+									  <tbody>
+										  <tr>
+											<td>83746</td>
+											<td>For Rent</td>
+											<td>Apartment</td>
+											<td>99</td>
+											<td>1250 <sup>p/d</sup></td>
+											<td>989</td>
+											<td>14</td>
+											<td>44</td>
+											<td>6,7%</td>
+										  </tr>
+										  <tr>
+											<td>83746</td>
+											<td>For Sale</td>
+											<td>House</td>
+											<td>99</td>
+											<td>201,000</td>
+											<td>989</td>
+											<td>14</td>
+											<td>44</td>
+											<td>6,7%</td>
+										  </tr>
+									  </tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end Page Content -->
+
+	<!-- Start Footer -->
+<div id="footer"></div>
+<!-- End Footer -->
+</div>
+
+<!-- Modal login, register, custom gallery, agency message -->
+<div id="login-modal-open"></div>
+<div id="register-modal-open"></div>
+<div class="custom-galery">
+	<input type="checkbox" class="gal" id="op">
+	<div class="lower"></div>
+	<div class="overlay overlay-hugeinc">
+		<label for="op"></label>
+		<nav>
+			<!-- Owl carousel -->
+			<div class="owl-carousel owl-theme carousel-full-width owl-demo-3">
+				<div class="item" style="background-image: url(http://placehold.it/950X800);"></div>
+				<div class="item" style="background-image: url(http://placehold.it/800X650);"></div>
+			</div>
+			<!-- End Owl carousel -->
+		</nav>
+	</div>
+</div>
+<div id="agency-modal-open"></div>
+<!-- End Modal login, register, custom gallery, agency message -->
+
+	<script src="https://maps.googleapis.com/maps/api/js?v=3&libraries=places&key=AIzaSyC4PfF1IcaUGi9v_jlJ3TeeMss7adWLoLA"></script>
+	<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="assets/js/icheck.min.js"></script>
+	<script type="text/javascript" src="assets/js/retina-1.1.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/fileinput.min.js"></script>
+	<script type="text/javascript" src="assets/js/markerwithlabel_packed.js"></script>
+
+	<script type="text/javascript" src="assets/js/tmpl.js"></script>
+	<script type="text/javascript" src="assets/js/infobox.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="assets/js/fileinput.min.js"></script>
+
+
+	<script type="text/javascript" src="assets/js/draggable-0.1.js"></script>
+	<script type="text/javascript" src="assets/js/masonry.pkgd.min.js"></script>
+	<script type="text/javascript" src="assets/js/selectize.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.slider.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-formhelpers.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.tablesorter.min.js"></script>
+
+	<script type="text/javascript" src="assets/js/custom-map.js"></script>
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+
+<!--[if gt IE 8]>
+	<script>
+		function initMap(){
+			var tribece = {lat: 40.719457, lng: -73.989642};
+
+			var map = new google.maps.Map(document.getElementById('map_2'), {
+				center: tribece,
+				zoom: 7
+			});
+
+			var marker = new google.maps.Marker({
+				position: tribece,
+				map: map,
+				icon: 'assets/img/marker-h.png',
+				labelAnchor: new google.maps.Point(50, 0),
+				draggable: true    //переміщення маркера
+			});
+
+
+			//Autocomplete
+			var input = (document.getElementById('pac-input_2'));
+
+			var autocomplete = new google.maps.places.Autocomplete(input);
+			autocomplete.bindTo('bounds', map);
+
+			autocomplete.addListener('place_changed', function() {
+				marker.setVisible(false);
+				var place = autocomplete.getPlace();
+				if (!place.geometry) {
+					window.alert("No details available for input: '" + place.name + "'");
+					return;
+				}
+
+				if (place.geometry.viewport) {
+					map.fitBounds(place.geometry.viewport);
+				}else{
+					map.setCenter(place.geometry.location);
+					map.setZoom(17);
+				}
+
+				marker.setPosition(place.geometry.location);
+				marker.setVisible(true);
+
+				var address = '';
+				if (place.address_components) {
+					address = [
+					(place.address_components[0] && place.address_components[0].short_name || ''),
+					(place.address_components[1] && place.address_components[1].short_name || ''),
+					(place.address_components[2] && place.address_components[2].short_name || '')
+					].join(' ');
+				}
+			});
+
+			//geolocation
+			$('.btn_position').click(function (){
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(function(position) {
+						var pos = {
+							lat: position.coords.latitude,
+							lng: position.coords.longitude
+						};
+						marker.setPosition(pos);
+						marker.setVisible(true);
+						map.setCenter(pos);
+					}, function() {
+						handleLocationError(true, marker, map.getCenter());
+					});
+				}else{
+					handleLocationError(false, marker, map.getCenter());
+				}
+
+				function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+						marker.setPosition(pos);
+						marker.setContent(browserHasGeolocation ?
+											  'Error: The Geolocation service failed.' :
+											  'Error: Your browser doesn\'t support geolocation.');
+				}
+			});
+			var elevator = new google.maps.ElevationService;
+			map.addListener('click', function(event) {
+			  displayLocationElevation(event.latLng, elevator, marker);
+			});
+		}
+
+
+
+		function displayLocationElevation(location, elevator, marker) {
+			elevator.getElevationForLocations({
+				'locations': [location]
+			},function(results, status) {
+				marker.setPosition(location);
+				if (status === 'OK') {
+					if (results[0]) {
+						marker.setVisible(true);
+					}else{
+						marker.setContent('No results found');
+					}
+				} else {
+					marker.setContent('Elevation service failed due to: ' + status);
+				}
+			});
+		}
+
+
+
+
+<script type="text/javascript" src="assets/js/ie.js"></script>
+<![endif]-->
+
+	</script>
+</body>
+</html>

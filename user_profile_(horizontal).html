@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+	<link rel="stylesheet" href="assets/css/selectize.css" type="text/css">
+	<title>Suburb | User Profile (horizontal)</title>
+</head>
+
+<body class="page user-profile" id="page-top">
+	<!-- Preloader -->
+	<div id="page-preloader">
+		<div class="loader-ring"></div>
+		<div class="loader-ring2"></div>
+	</div>
+	<!-- End Preloader -->
+
+	<!-- Wrapper -->
+	<div class="wrapper">
+		<!-- Start Header -->
+		<div id="header"></div>
+		<!-- End Header -->
+
+		<!-- Page Content -->
+		<div id="page-content">
+			<div class="container">
+				<ol class="breadcrumb">
+					<li><a href="index_v_1.html">Home</a></li>
+					<li class="active">User profile</li>
+				</ol>
+			</div>
+			<div class="container">
+				<header class="header"><h2>Profile Settings</h2>
+					<p>Setup your Account</p>
+				</header>
+				<ul id="tabs" class="nav nav-tabs tabs-bh" data-tabs="tabs">
+					<li class="active">
+						<a href="#details" data-toggle="tab">
+							<img src="assets/img/user.png" alt="">
+							<span class="img-tab">My Details</span>
+						</a>
+					</li>
+					<li>
+						<a href="#alerts" data-toggle="tab">
+							<img src="assets/img/notification.png" alt="">
+							<span class="img-tab">Saved Alerts and Searches</span>
+						</a>
+					</li>
+					<li>
+						<a href="#proporties" data-toggle="tab">
+							<img src="assets/img/heart.png" alt="">
+							<span class="img-tab">Saved properties</span>
+						</a>
+					</li>
+					<li>
+						<a href="#properties" data-toggle="tab">
+							<img src="assets/img/plus.png" alt="">
+							<span class="img-tab">Compare Properties</span>
+						</a>
+					</li>
+				</ul>
+				<div id="my-tab-content" class="tab-content">
+					<div id="details" class="tab-pane fade in active">
+						<ul id="tabs2" class="nav nav-tabs tabs-bh" data-tabs="tabs">
+							<li class="active"><a href="#cont_detail" data-toggle="tab"><span>Contact details</span></a></li>
+							<li><a href="#change_pass" data-toggle="tab"><span>Change password</span></a></li>
+						</ul>
+						<div id="my-tab-content2" class="tab-content">
+							<div id="cont_detail" class="tab-pane fade in active">
+								<div class="row">
+									<div class="container">
+										<form id="form-account-profile" method="post">
+											<div class="form-inline">
+												<div class="row">
+													<label class="col-md-2 col-sm-3">Name:</label>
+													<div class="col-md-10 col-sm-9">
+														<input type="text" class="form-control inpt_item inp_name" placeholder="Enter your Name">
+													</div>
+												</div>
+											</div>
+											<div class="form-inline">
+												<div class="row">
+													<label class="col-md-2 col-sm-3">Email Adress:</label>
+													<div class="col-md-10 col-sm-9">
+														<input type="text" class="form-control inpt_item inp_adress" placeholder="Enter your Email Adress">
+													</div>
+												</div>
+											</div>
+											<div class="form-inline">
+												<div class="row">
+													<label class="col-md-2 col-sm-3">Mobile Phone:</label>
+													<div class="col-md-10 col-sm-9">
+														<input type="text" class="form-control inpt_item inp_number" placeholder="8 digital number">
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-10 col-sm-9 col-md-offset-2 col-sm-offset-3">
+													<button type="submit" class="upd_dtl">update details</button>
+													<div class="det_info">
+														<p>By submitting this form, you confirm that you agree our website terms of use, cur privacy policy and consent to cookies being stored on your computer. </p>
+														<!-- <div class="checkbox">
+													    <label>
+													      <input type="checkbox"> Check me out
+													    </label>
+													  </div> -->
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div id="change_pass" class="tab-pane fade">
+								<div class="row">
+									<div class="col-md-6 col-sm-6">
+										<form id="form-account-password" method="post">
+											<div class="form-group">
+												<label for="form-account-password-current">Current Password</label>
+												<input type="password" class="form-control inpt_item" id="form-account-password-current" name="form-account-password-current">
+											</div><!-- /.form-group -->
+											<div class="form-group">
+												<label for="form-account-password-new">New Password</label>
+												<input type="password" class="form-control inpt_item" id="form-account-password-new" name="form-account-password-new">
+											</div><!-- /.form-group -->
+											<div class="form-group">
+												<label for="form-account-password-confirm-new">Confirm New Password</label>
+												<input type="password" class="form-control inpt_item" id="form-account-password-confirm-new" name="form-account-password-confirm-new">
+											</div><!-- /.form-group -->
+											<div class="form-group clearfix">
+												<button type="submit" class="btn pull-left btn-small btn-primary" id="form-account-password-submit">Change</button>
+												<button type="reset" class="btn pull-left btn-default btn-small cancel_btn" value="reset">Cancel</button>
+											</div><!-- /.form-group -->
+										</form><!-- /#form-account-password -->
+									</div>
+									<div class="col-md-6 col-sm-6">
+										<div class="pas-block">
+											<strong>Hint:</strong>
+											<p>Be careful. After you change the password, the password is automatically applied. <br><br>If you don't have a current password you can sign out and reset your password at sign in page.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="alerts" class="tab-pane fade">
+						<div class="district_item">
+							<div class="district_info">
+								<div class="name">District, Area, Street</div>
+								<ul class="dist_info_list">
+									<li>Price Range between EUR200,000 - EUR400,000</li>
+									<li>2 Bedroom Apartment</li>
+									<li>Minimum 150 Square Meters</li>
+									<li>Maximum EUR 1,700 per Square</li>
+								</ul>
+							</div>
+							<div class="district_btns">
+								<div class="edit_btns">
+									<a href="javascript:void(0)" class="edit_b"><i class="fa fa-pencil" aria-hidden="true"></i>edit</a>
+									<a href="javascript:void(0)" class="delete_itm"><i class="fa fa-trash-o" aria-hidden="true"></i>delete</a>
+								</div>
+								<a href="javascript:void(0)" class="dist_main_btn search_itm"><i class="fa fa-search" aria-hidden="true"></i>Search results </a>
+								<a href="javascript:void(0)" class="dist_main_btn like_itm"><i class="fa fa-heart-o" aria-hidden="true"></i>Instant Property Alerts ON</a>
+							</div>
+						</div>
+						<div class="district_item">
+							<div class="district_info">
+								<div class="name">District, Area, Street</div>
+								<ul class="dist_info_list">
+									<li>Price Range between EUR200,000 - EUR400,000</li>
+									<li>2 Bedroom Apartment</li>
+									<li>Minimum 150 Square Meters</li>
+									<li>Maximum EUR 1,700 per Square</li>
+								</ul>
+							</div>
+							<div class="district_btns">
+								<div class="edit_btns">
+									<a href="javascript:void(0)" class="edit_b"><i class="fa fa-pencil" aria-hidden="true"></i>edit</a>
+									<a href="javascript:void(0)" class="delete_itm"><i class="fa fa-trash-o" aria-hidden="true"></i>delete</a>
+								</div>
+								<a href="javascript:void(0)" class="dist_main_btn search_itm"><i class="fa fa-search" aria-hidden="true"></i>Search results </a>
+								<a href="javascript:void(0)" class="dist_main_btn like_itm"><i class="fa fa-heart-o" aria-hidden="true"></i>Instant Property Alerts ON</a>
+							</div>
+						</div>
+						<div class="district_item">
+							<div class="district_info">
+								<div class="name">District, Area, Street</div>
+								<ul class="dist_info_list">
+									<li>Price Range between EUR200,000 - EUR400,000</li>
+									<li>2 Bedroom Apartment</li>
+									<li>Minimum 150 Square Meters</li>
+									<li>Maximum EUR 1,700 per Square</li>
+								</ul>
+							</div>
+							<div class="district_btns">
+								<div class="edit_btns">
+									<a href="javascript:void(0)" class="edit_b"><i class="fa fa-pencil" aria-hidden="true"></i>edit</a>
+									<a href="javascript:void(0)" class="delete_itm"><i class="fa fa-trash-o" aria-hidden="true"></i>delete</a>
+								</div>
+								<a href="javascript:void(0)" class="dist_main_btn search_itm"><i class="fa fa-search" aria-hidden="true"></i>Search results </a>
+								<a href="javascript:void(0)" class="dist_main_btn like_itm"><i class="fa fa-heart-o" aria-hidden="true"></i>Instant Property Alerts ON</a>
+							</div>
+						</div>
+					</div>
+					<div id="proporties" class="tab-pane fade">
+						<div class="wide-2">
+							<div class="row white prop_itm">
+								<div class="col-md-3 col-sm-3 prp-img">
+									<div class="exp-img-2" style="background:url(http://placehold.it/255x200) center;background-size: cover;">
+										<span class="filter"></span>
+										<span class="ffs-bs"><label for="op" class="btn btn-small btn-primary">browse photos</label></span>
+										<div class="overlay">
+											<div class="img-counter">23 Photo</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-info col-lg-7 col-md-6 col-sm-6">
+									<h4>
+										<a href="property_page.html">AVA High Line 89 - 916 Apartments</a>
+										<a href="javascript:void(0)" class="comp_logo"><img src="assets/img/fox-min.png" alt=""></a>
+									</h4>
+									<p class="team-color">525 W 28th St, New York, NY 10001</p>
+									<div class="block block_prop">
+										<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+											<img src="assets/img/bedroom.png" alt="">
+											<p class="info-line">3 Bedrooms</p>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+											<img src="assets/img/bathroom.png" alt="">
+											<p class="info-line">1 Bathroom</p>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+											<img src="assets/img/square.png" alt="">
+											<p class="info-line">100 m<span class="rank">2</span></p>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+											<img src="assets/img/garage.png" alt="">
+											<p class="info-line">1 Garage</p>
+										</div>
+									</div>
+									<p>Aenean quis sem nisi. Aliquam vehicula gravida orci, nec pretium mi ultricies in. Donec fermentum pulvinar mauris neque justo ...</p>
+								</div>
+								<div class="item-price col-lg-2 col-md-3 col-sm-3 col-xs-12">
+									<div class="sum summ2 col-sm-12 col-xs-6">
+										<p>$1,000,000</p>
+										<p class="team-color">for rent</p>
+									</div>
+									<a href="javascrotp:void(0)" class="main_link call_l col-xs-12"><i class="fa fa-phone" aria-hidden="true"></i>Call Now</a>
+									<a href="javascrotp:void(0)" class="main_link email_l col-xs-12"><i class="fa fa-envelope-o" aria-hidden="true"></i>Email Now</a>
+									<div class="sum favorite bott_lnk col-sm-12 col-xs-6">
+										<div class="bookmark col-xs-3" data-bookmark-state="empty">
+											<span class="title-add">Add to bookmark</span>
+										</div>
+										<p class="col-xs-3">Fav</p>
+										<div class="compare col-xs-3" data-compare-state="empty">
+											<span class="plus-add">Add to compare</span>
+										</div>
+										<p class="col-xs-3">Comp</p>
+									</div>
+								</div>
+							</div>
+							<div class="row white prop_itm">
+								<div class="col-md-3 col-sm-3 prp-img">
+									<div class="exp-img-2" style="background:url(http://placehold.it/255x200) center;background-size: cover;">
+										<span class="filter"></span>
+										<span class="ffs-bs"><label for="op" class="btn btn-small btn-primary">browse photos</label></span>
+										<div class="overlay">
+											<div class="img-counter">23 Photo</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-info col-lg-7 col-md-6 col-sm-6">
+									<h4>
+										<a href="property_page.html">AVA High Line 89 - 916 Apartments</a>
+										<a href="javascript:void(0)" class="comp_logo"><img src="assets/img/fox-min.png" alt=""></a>
+									</h4>
+									<p class="team-color">525 W 28th St, New York, NY 10001</p>
+									<div class="block block_prop">
+										<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+											<img src="assets/img/bedroom.png" alt="">
+											<p class="info-line">3 Bedrooms</p>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+											<img src="assets/img/bathroom.png" alt="">
+											<p class="info-line">1 Bathroom</p>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+											<img src="assets/img/square.png" alt="">
+											<p class="info-line">100 m<span class="rank">2</span></p>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+											<img src="assets/img/garage.png" alt="">
+											<p class="info-line">1 Garage</p>
+										</div>
+									</div>
+									<p>Aenean quis sem nisi. Aliquam vehicula gravida orci, nec pretium mi ultricies in. Donec fermentum pulvinar mauris neque justo ...</p>
+								</div>
+								<div class="item-price col-lg-2 col-md-3 col-sm-3 col-xs-12">
+									<div class="sum summ2 col-sm-12 col-xs-6">
+										<p>$1,000,000</p>
+										<p class="team-color">for rent</p>
+									</div>
+									<a href="javascrotp:void(0)" class="main_link call_l col-xs-12"><i class="fa fa-phone" aria-hidden="true"></i>Call Now</a>
+									<a href="javascrotp:void(0)" class="main_link email_l col-xs-12"><i class="fa fa-envelope-o" aria-hidden="true"></i>Email Now</a>
+									<div class="sum favorite bott_lnk col-sm-12 col-xs-6">
+										<div class="bookmark col-xs-3" data-bookmark-state="empty">
+											<span class="title-add">Add to bookmark</span>
+										</div>
+										<p class="col-xs-3">Fav</p>
+										<div class="compare col-xs-3" data-compare-state="empty">
+											<span class="plus-add">Add to compare</span>
+										</div>
+										<p class="col-xs-3">Comp</p>
+									</div>
+								</div>
+							</div>
+							<div class="row white prop_itm">
+								<div class="col-md-3 col-sm-3 prp-img">
+									<div class="exp-img-2" style="background:url(http://placehold.it/255x200) center;background-size: cover;">
+										<span class="filter"></span>
+										<span class="ffs-bs"><label for="op" class="btn btn-small btn-primary">browse photos</label></span>
+										<div class="overlay">
+											<div class="img-counter">23 Photo</div>
+										</div>
+									</div>
+								</div>
+								<div class="item-info col-lg-7 col-md-6 col-sm-6">
+									<h4>
+										<a href="property_page.html">AVA High Line 89 - 916 Apartments</a>
+										<a href="javascript:void(0)" class="comp_logo"><img src="assets/img/fox-min.png" alt=""></a>
+									</h4>
+									<p class="team-color">525 W 28th St, New York, NY 10001</p>
+									<div class="block block_prop">
+										<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+											<img src="assets/img/bedroom.png" alt="">
+											<p class="info-line">3 Bedrooms</p>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+											<img src="assets/img/bathroom.png" alt="">
+											<p class="info-line">1 Bathroom</p>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+											<img src="assets/img/square.png" alt="">
+											<p class="info-line">100 m<span class="rank">2</span></p>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3 cat-img">
+											<img src="assets/img/garage.png" alt="">
+											<p class="info-line">1 Garage</p>
+										</div>
+									</div>
+									<p>Aenean quis sem nisi. Aliquam vehicula gravida orci, nec pretium mi ultricies in. Donec fermentum pulvinar mauris neque justo ...</p>
+								</div>
+								<div class="item-price col-lg-2 col-md-3 col-sm-3 col-xs-12">
+									<div class="sum summ2 col-sm-12 col-xs-6">
+										<p>$1,000,000</p>
+										<p class="team-color">for rent</p>
+									</div>
+									<a href="javascrotp:void(0)" class="main_link call_l col-xs-12"><i class="fa fa-phone" aria-hidden="true"></i>Call Now</a>
+									<a href="javascrotp:void(0)" class="main_link email_l col-xs-12"><i class="fa fa-envelope-o" aria-hidden="true"></i>Email Now</a>
+									<div class="sum favorite bott_lnk col-sm-12 col-xs-6">
+										<div class="bookmark col-xs-3" data-bookmark-state="empty">
+											<span class="title-add">Add to bookmark</span>
+										</div>
+										<p class="col-xs-3">Fav</p>
+										<div class="compare col-xs-3" data-compare-state="empty">
+											<span class="plus-add">Add to compare</span>
+										</div>
+										<p class="col-xs-3">Comp</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="properties" class="tab-pane fade">
+						<div class="table-responsive submit-pricing">
+							<table class="table center">
+								<thead>
+									<tr>
+										<th class="right h4">Your Property:</th>
+										<th class="title">
+											<div class="wide-2">
+												<div class="exp-img-2" style="background:url(http://placehold.it/255x200) center;background-size: cover;">
+													<span class="filter"></span>
+													<span class="ffs-bs"><label for="op" class="btn btn-small btn-primary">browse photos</label></span>
+													<div class="overlay">
+														<div class="img-counter">23 Photo</div>
+													</div>
+												</div>
+											</div>
+										</th>
+										<th class="title">
+											<div class="wide-2">
+												<div class="exp-img-2" style="background:url(http://placehold.it/255x200) center;background-size: cover;">
+													<span class="filter"></span>
+													<span class="ffs-bs"><label for="op" class="btn btn-small btn-primary">browse photos</label></span>
+													<div class="overlay">
+														<div class="img-counter">23 Photo</div>
+													</div>
+												</div>
+											</div>
+										</th>
+										<th class="title">
+											<div class="wide-2">
+												<div class="exp-img-2" style="background:url(http://placehold.it/255x200) center;background-size: cover;">
+													<span class="filter"></span>
+													<span class="ffs-bs"><label for="op" class="btn btn-small btn-primary">browse photos</label></span>
+													<div class="overlay">
+														<div class="img-counter">23 Photo</div>
+													</div>
+												</div>
+											</div>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="right">Property Price</td>
+										<td>$5,000,000</td>
+										<td>$5,000,000</td>
+										<td>$5,000,000</td>
+									</tr>
+									<tr class="name_prp">
+										<td class="right">Property Name</td>
+										<td>AVA High Line 980917 APartments Lorem ipsum 2 row of ...</td>
+										<td>AVA High Line 980917 APartments Lorem ipsum 2 row of ...</td>
+										<td>AVA High Line 980917 APartments Lorem ipsum 2 row of ...</td>
+									</tr>
+									<tr>
+										<td class="right">Property Address</td>
+										<td>Address Greate 19 00</td>
+										<td>Address Greate 19 00</td>
+										<td>Address Greate 19 00</td>
+									</tr>
+									<tr>
+										<td class="right">Property Type</td>
+										<td>Apartment Studio</td>
+										<td>Apartment Studio</td>
+										<td>Apartment Studio</td>
+									</tr>
+									<tr>
+										<td class="right">Bedrooms</td>
+										<td>3</td>
+										<td>3</td>
+										<td>3</td>
+									</tr>
+									<tr>
+										<td class="right">Bathrooms</td>
+										<td>2</td>
+										<td>2</td>
+										<td>2</td>
+									</tr>
+									<tr>
+										<td class="right">Size</td>
+										<td>100m<span>2</span></td>
+										<td>100m<span>2</span></td>
+										<td>100m<span>2</span></td>
+									</tr>
+									<tr>
+										<td class="right">Garages</td>
+										<td class="not-available">No</td>
+										<td class="available">Included</td>
+										<td class="available">Included</td>
+									</tr>
+									<tr class="buttons">
+										<td></td>
+										<td><a href="javascript:void(0)" class="table_more_btn">MORE DETAILS</a></td>
+										<td><a href="javascript:void(0)" class="table_more_btn">MORE DETAILS</a></td>
+										<td><a href="javascript:void(0)" class="table_more_btn">MORE DETAILS</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!-- /.submit-pricing -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end Page Content -->
+
+		<!-- Start Footer -->
+    <div id="footer"></div>
+    <!-- End Footer -->
+	</div>
+
+	<!-- Modal login, register, custom gallery -->
+	<div id="login-modal-open"></div>
+	<div id="register-modal-open"></div>
+	<div class="custom-galery">
+		<input type="checkbox" class="gal" id="op">
+		<div class="lower"></div>
+		<div class="overlay overlay-hugeinc">
+			<label for="op"></label>
+			<nav>
+				<!-- Owl carousel -->
+				<div class="owl-carousel owl-theme carousel-full-width owl-demo-3">
+					<div class="item" style="background-image: url(http://placehold.it/950X800);"></div>
+					<div class="item" style="background-image: url(http://placehold.it/800X650);"></div>
+				</div>
+				<!-- End Owl carousel -->
+			</nav>
+		</div>
+	</div>
+
+	<!-- End Modal login, register, custom gallery -->
+
+	<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="assets/js/retina-1.1.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/fileinput.min.js"></script>
+	<script type="text/javascript" src="assets/js/masonry.pkgd.min.js"></script>
+	<script type="text/javascript" src="assets/js/selectize.min.js"></script>
+
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+<!--[if gt IE 8]>
+<script type="text/javascript" src="assets/js/ie.js"></script>
+<![endif]-->
+</body>
+</html>
