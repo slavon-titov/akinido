@@ -11571,6 +11571,27 @@ body {
 					}
 				}
 			}
+            .form_group_bottom {
+                padding: 0 20px !important;
+                button{    
+                    border-radius: 3px;
+                    font-size: 14px;
+                    color: #fff;
+                    font-weight: bold;
+                    background: #e41d34;
+                    border: none;
+                    width: 130px;
+                    height: 38px;
+                    transition: .2s;
+                    border: 2px solid #e41d34;
+                    transition: 0.16s;
+                    margin-left: 15px;
+                    &:hover{
+                        background: rgba(255, 255, 255, 0);
+                        color: rgba(0, 0, 0, 0.96);
+                    }    
+                }
+            }            
 			&_table{
 				padding-left: 0;
 				padding-right: 0;
