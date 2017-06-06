@@ -46,7 +46,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#prop_details" data-toggle="tab">
+					<a id="agency_click" href="#prop_details" data-toggle="tab">
 						<span class="img-tab">Add/Edit Property Details</span>
 					</a>
 				</li>
@@ -313,7 +313,7 @@
 								</div>
 								<div class="map">
 									<h4>Double Click on map to PIN the location</h4>
-									<div id="map_2"></div>
+									<div id="map"></div>
 								</div>
 								<div class="form_control_prt pad col-xs-12">
 									<div class="form-group col-xs-12 col-sm-3 col-md-2">
@@ -366,6 +366,15 @@
 								<div class="form_control_prt pad col-md-12 col-xs-12">
 									<h3>Additional fields</h3>
 									<div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Bathrooms</label>
+										<select class="selection">
+											<option>0</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+										</select>
+									</div>
+                                    <div class="form-group col-md-2 col-sm-6 col-xs-12">
 										<label>Parking</label>
 										<select class="selection">
 											<option>Yes</option>
@@ -373,13 +382,56 @@
 										</select>
 									</div>
 									<div class="form-group col-md-2 col-sm-6 col-xs-12">
-										<label>Garden</label>
+										<label>Garage</label>
 										<select class="selection">
 											<option>Yes</option>
 											<option>No</option>
 										</select>
 									</div>
+                                    <div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Plot size m<sup>2</sup></label>
+										<select class="selection">											
+											<option>100</option>
+											<option>120</option>
+											<option>150</option>
+											<option>180</option>
+											<option>200</option>
+										</select>
+									</div>
+                                    <div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>New Build</label>
+										<select class="selection">
+											<option>Yes</option>
+											<option>No</option>
+										</select>
+									</div>
+                                    <div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Condition</label>
+										<select class="selection">
+											<option>Yes</option>
+											<option>No</option>
+										</select>
+									</div>
+                                    <div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Year Build</label>
+										<select class="selection">
+											<option>2010</option>
+											<option>2011</option>
+											<option>2012</option>
+											<option>2013</option>
+											<option>2014</option>
+											<option>2016</option>
+											<option>2017</option>
+										</select>
+									</div>
 									<div class="form-group col-md-2 col-sm-6 col-xs-12">
+										<label>Veranda</label>
+										<select class="selection">
+											<option>Yes</option>
+											<option>No</option>
+										</select>
+									</div>
+                                    <div class="form-group col-md-2 col-sm-6 col-xs-12">
 										<label>Furnished</label>
 										<select class="selection">
 											<option>Yes</option>
@@ -958,8 +1010,8 @@
 		<nav>
 			<!-- Owl carousel -->
 			<div class="owl-carousel owl-theme carousel-full-width owl-demo-3">
-				<div class="item" style="background-image: url(http://placehold.it/950X800);"></div>
-				<div class="item" style="background-image: url(http://placehold.it/800X650);"></div>
+				<div class="item" style="background-image: url(//placehold.it/950X800);"></div>
+				<div class="item" style="background-image: url(//placehold.it/800X650);"></div>
 			</div>
 			<!-- End Owl carousel -->
 		</nav>
@@ -994,28 +1046,44 @@
 	<script type="text/javascript" src="assets/js/custom-map.js"></script>
 	<script type="text/javascript" src="assets/js/custom.js"></script>
 
-<!--[if gt IE 8]>
-	<script>
-		function initMap(){
-			var tribece = {lat: 40.719457, lng: -73.989642};
+	<script type="text/javascript">
+		var _latitude = 34.708406;
+		var _longitude = 33.123837;
+		
+        $('a#agency_click').on('shown.bs.tab', function (e) {
+            google.maps.event.addDomListener(window, 'load', initMap(_latitude,_longitude));    
+        });
+        
+        function initMap(_latitude,_longitude){
+			var tribece = new google.maps.LatLng(_latitude,_longitude);
 
-			var map = new google.maps.Map(document.getElementById('map_2'), {
+			var map = new google.maps.Map(document.getElementById('map'), {
 				center: tribece,
-				zoom: 7
-			});
-
-			var marker = new google.maps.Marker({
+				zoom: 7                
+			});                        
+            
+            var marker = new google.maps.Marker({
 				position: tribece,
 				map: map,
 				icon: 'assets/img/marker-h.png',
 				labelAnchor: new google.maps.Point(50, 0),
-				draggable: true    //переміщення маркера
+				draggable: true
+			});
+            
+            //map.setCenter({lat: 35.708406, lng: 30.123837});
+
+			//$('#map').removeClass('fade-map');
+			google.maps.event.addListener(marker, "mouseup", function (event) {
+				var latitude = this.position.lat();
+				var longitude = this.position.lng();
+				$('#latitude').val( this.position.lat() );
+				$('#longitude').val( this.position.lng() );
 			});
 
 
 			//Autocomplete
-			var input = (document.getElementById('pac-input_2'));
-
+			var input = (document.getElementById('pac-input_2')); 
+          
 			var autocomplete = new google.maps.places.Autocomplete(input);
 			autocomplete.bindTo('bounds', map);
 
@@ -1036,6 +1104,8 @@
 
 				marker.setPosition(place.geometry.location);
 				marker.setVisible(true);
+				$('#latitude').val( marker.getPosition().lat() );
+				$('#longitude').val( marker.getPosition().lng() );
 
 				var address = '';
 				if (place.address_components) {
@@ -1058,6 +1128,8 @@
 						marker.setPosition(pos);
 						marker.setVisible(true);
 						map.setCenter(pos);
+						$('#latitude').val( marker.getPosition().lat() );
+						$('#longitude').val( marker.getPosition().lng() );
 					}, function() {
 						handleLocationError(true, marker, map.getCenter());
 					});
@@ -1078,8 +1150,6 @@
 			});
 		}
 
-
-
 		function displayLocationElevation(location, elevator, marker) {
 			elevator.getElevationForLocations({
 				'locations': [location]
@@ -1096,13 +1166,15 @@
 				}
 			});
 		}
+		function success(position) {
+			initSubmitMap(position.coords.latitude, position.coords.longitude);
+			$('#latitude').val( position.coords.latitude );
+			$('#longitude').val( position.coords.longitude );
+		}
+	</script>
 
-
-
-
+<!--[if gt IE 8]>
 <script type="text/javascript" src="assets/js/ie.js"></script>
 <![endif]-->
-
-	</script>
 </body>
 </html>

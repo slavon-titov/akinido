@@ -79,6 +79,9 @@ $(document).ready(function($) {
     $.get("modal_agent_message.html", function(data){
       $('#agent-modal-open').append(data);
     });
+    $.get("modal_agency_xml.html", function(data){
+      $('#agency-modal-xml').append(data);
+    });
 
 	$('.s_admin__box_content_tetragons._tabs .tetragon').click(function(){
 		var el = $(this),
@@ -103,9 +106,10 @@ $(document).ready(function($) {
 	});
 
 	//map
-	$('.map_input , .btn_position').click(function(){
-		$('.map').addClass('visible');
-	});
+	$('.map_input , .btn_position').click(function(){		        
+        $('.map').addClass('visible');
+        google.maps.event.trigger(map, "resize");
+	});    
 
 	//admin page >> agency details >> password and users hide/show select
 	$('._helper_for_hide_select').click(function(){
@@ -535,13 +539,14 @@ $(document).ready(function($) {
 	}
 	//
 	$('.input-additional').click(function(){
-		$('<div class="form-group added col-xs-12 col-sm-6 col-md-2"><input type="numb" class="form-control" required></div>').prependTo('.addition');
+		$('<div class="form-group added col-xs-12 col-sm-6 col-md-2"><label>&nbsp;</label><input type="numb" class="form-control" required></div>').prependTo('.addition');
 	});
-	//my agency click agency details
-	$(".prop_itm2 .agency_click" ).click(function(e) {
+	//my agency click agency details    
+    $(".prop_itm2 .agency_click" ).click(function(e) {
   		e.preventDefault();
 		$("#agency_click").trigger("click");
 		$(this).closest('.prop_itm2').addClass('active').siblings().removeClass('active');
+        return false;
 	});
 
 	//graph
@@ -761,7 +766,6 @@ $(document).ready(function($) {
 
 
 
-
 });
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -855,7 +859,7 @@ $(window).load(function(){
     $spinner = $preloader.find('.gps_ring');
     $spinner2 = $preloader.find('.gps_ring2');
     $spinner.fadeOut();
-    $spinner2.fadeOut();
+    $spinner2.fadeOut();        
 
 });
 
@@ -863,9 +867,11 @@ $(window).load(function(){
 // Functions
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_field'), {
-    componentRestrictions: {country: 'cy'}
-});
+if ($('body').is('#search_field')) {
+    var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_field'), {
+        componentRestrictions: {country: 'cy'}
+    });
+}
 // function initialize() {
 
 //     var options = {
@@ -923,5 +929,3 @@ function initCounter(){
 function setCarouselWidth(){
     $('.carousel-full-width').css('width', $(window).width());
 }
-
-

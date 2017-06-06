@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="assets/css/jquery.slider.min.css" type="text/css">
+    <link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css">
 	<link rel="stylesheet" href="assets/css/selectize.css" type="text/css">
@@ -53,9 +54,20 @@
 									</div>
 								</div>
 							</div><!-- text-block contact -->
-							<div class="contacts_btns">
-								<a href="javascript:void(0)" class="cont_btn"><i class="fa fa-phone" aria-hidden="true"></i>Call Now</a>
-								<a href="javascript:void(0)" class="cont_btn"><i class="fa fa-envelope-o" aria-hidden="true"></i>Send messege</a>
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <div class="contacts_btns row">
+                                        <div class="col-sm-6"><a href="javascript:void(0)" class="cont_btn text-left"><i class="fa fa-phone" aria-hidden="true"></i>Call Now</a></div>
+                                        <div class="top-inner-space-20 visible-xs"></div>
+                                        <div class="col-sm-6"><a href="javascript:void(0)" class="cont_btn text-left"><i class="fa fa-envelope-o" aria-hidden="true"></i>Send messege</a></div>
+                                    </div>
+                                </div>
+                                <div class="contacts_btns_2 col-md-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 top-space-20"><a href="javascript:void(0)">Properties for Sale</a></div>
+                                        <div class="col-sm-6 top-space-20"><a href="javascript:void(0)">Properties for Rent</a></div>
+                                    </div>
+                                </div>                                
 							</div>
 						</div><!-- agent-info -->
 					</div><!-- content -->
@@ -66,20 +78,90 @@
 					<div class="input-group">
 						My Properties (4)
 					</div>
-					<ul class="tab-links">
+					<ul class="tab-links bottom-space-20">
 						<li class="active"><a href="#tab1"><img src="assets/img/map.png" alt=""/>Map</a></li>
 						<li><a href="#tab2"><img src="assets/img/grid.png" alt=""/>Grid</a></li>
 						<li><a href="#tab3"><i class="fa fa-th-list"></i>List</a></li>
 					</ul>
+                    
 					<!-- tab-links -->
 					<div class="tab-content">
-						<div id="tab1" class="tab active">
-							<!-- Map -->
+						<div id="tab1" class="tab _active">
+                            <!-- Range slider -->
+                            <div class="col-xs-12 p_35">
+                                <div class="row">
+                                    <form method="post">
+                                        <div class="col-md-2 col-sm-3">
+                                            <div class="form-inline">
+                                                <label class="top-indent">Price Range:</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 p_lf p_rg">
+                                            <div class="form-group">
+                                                <div class="price-range price-range-wrapper">
+                                                    <input class="price-input" type="text" name="price" value="0;5000000">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <p class="price-range-text">1,000 properties available for Rent</p>
+                                        </div>
+                                    </form>
+                                </div><!-- row -->
+                            </div>	<!-- explore_grid -->
+							
+                            <!-- Map -->
 							<div id="map"></div>
 							<!-- end Map -->
 						</div><!-- tab active -->
 						<div id="tab2" class="tab">
-							<div class="wide-2">
+							<!-- Range slider -->
+                            <div class="col-xs-12 p_35">
+                                <div class="row">
+                                    <form method="post">
+                                        <div class="col-md-2 col-sm-3">
+                                            <div class="form-inline">
+                                                <label class="top-indent">Price Range:</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 p_lf p_rg">
+                                            <div class="form-group">
+                                                <div class="price-range price-range-wrapper"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 col-sm-3 p_rl">
+                                            <div class="select-block select-blockk2 col-sm-12 col-xs-12 ">
+                                                <select class="selection">
+                                                    <option>Show</option>
+                                                    <option>6</option>
+                                                    <option>12</option>
+                                                    <option>24</option>
+                                                    <option>48</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 col-sm-3 p_rg">
+                                            <div class="select-block select-blockk2 col-sm-12 col-xs-12">
+                                                <select class="selection">
+                                                    <option>Sort By:</option>
+                                                    <option>Most Recent</option>
+                                                    <option>Price - Low/High</option>
+                                                    <option>Price - High/Low</option>
+                                                    <option>m<sup>2</sup> Price - Low/High</option>
+                                                    <option>m<sup>2</sup> Price - High/Low</option>
+                                                    <option>m<sup>2</sup> Size - Low/High</option>
+                                                    <option>m<sup>2</sup> Size - High/Low</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <p class="price-range-text">1,000 properties available for Rent</p>
+                                        </div>
+                                    </form>
+                                </div><!-- row -->
+                            </div>	<!-- explore_grid -->
+                            
+                            <div class="wide-2">
 								<div class="container">
 									<div class="row">
 										<div class="col-md-3 col-sm-3 col-xs-6 prop">
@@ -256,6 +338,52 @@
 							<!-- end wide-2 -->
 						</div>
 						<div id="tab3" class="tab">
+                            <!-- Range slider -->
+                            <div class="col-xs-12 p_35">
+                                <div class="row">
+                                    <form method="post">
+                                        <div class="col-md-2 col-sm-3">
+                                            <div class="form-inline">
+                                                <label class="top-indent">Price Range:</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 p_lf p_rg">
+                                            <div class="form-group">
+                                                <div class="price-range price-range-wrapper"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 col-sm-3 p_rl">
+                                            <div class="select-block select-blockk2 col-sm-12 col-xs-12 ">
+                                                <select class="selection">
+                                                    <option>Show</option>
+                                                    <option>6</option>
+                                                    <option>12</option>
+                                                    <option>24</option>
+                                                    <option>48</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 col-sm-3 p_rg">
+                                            <div class="select-block select-blockk2 col-sm-12 col-xs-12">
+                                                <select class="selection">
+                                                    <option>Sort By:</option>
+                                                    <option>Most Recent</option>
+                                                    <option>Price - Low/High</option>
+                                                    <option>Price - High/Low</option>
+                                                    <option>m<sup>2</sup> Price - Low/High</option>
+                                                    <option>m<sup>2</sup> Price - High/Low</option>
+                                                    <option>m<sup>2</sup> Size - Low/High</option>
+                                                    <option>m<sup>2</sup> Size - High/Low</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <p class="price-range-text">1,000 properties available for Rent</p>
+                                        </div>
+                                    </form>
+                                </div><!-- row -->
+                            </div>	<!-- explore_grid -->
+                            
 							<div class="wide-2">
 								<div class="container">
 									<div class="row white">
@@ -533,6 +661,10 @@
 	<script type="text/javascript" src="assets/js/markerwithlabel_packed.js"></script>
 	<script type="text/javascript" src="assets/js/masonry.pkgd.min.js"></script>
 	<script type="text/javascript" src="assets/js/selectize.min.js"></script>
+    <script type="text/javascript" src="assets/js/tmpl.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.dependClass-0.1.js"></script>
+	<script type="text/javascript" src="assets/js/draggable-0.1.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.slider.js"></script>
 
 	<script type="text/javascript" src="assets/js/custom-map.js"></script>
 	<script type="text/javascript" src="assets/js/custom.js"></script>

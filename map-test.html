@@ -1,0 +1,163 @@
+<html>
+    <body>
+        <div class="form_control_prt col-xs-12">
+            <div class="form-group">
+                <label for="pac-input">Adresss</label>
+                <div class="local" style="display: flex">
+                    <input id="pac-input" type="text" class="form-control map_input" placeholder="Limassol, Agios Tychonas, Amathountos Street">
+                    <i class="fa fa-search"></i>
+                    <div class="btn_position">Get My Position</div>
+                </div>
+            </div>
+        </div>
+        <div id="map" style="width: 50%; height: 480px; margin: 0 auto"></div>
+    </body>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3&libraries=places&key=AIzaSyC4PfF1IcaUGi9v_jlJ3TeeMss7adWLoLA"></script>
+	<script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="assets/js/icheck.min.js"></script>
+	<script type="text/javascript" src="assets/js/retina-1.1.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/fileinput.min.js"></script>
+	<script type="text/javascript" src="assets/js/markerwithlabel_packed.js"></script>
+
+	<script type="text/javascript" src="assets/js/tmpl.js"></script>
+	<script type="text/javascript" src="assets/js/infobox.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="assets/js/fileinput.min.js"></script>
+
+
+	<script type="text/javascript" src="assets/js/draggable-0.1.js"></script>
+	<script type="text/javascript" src="assets/js/masonry.pkgd.min.js"></script>
+	<script type="text/javascript" src="assets/js/selectize.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.slider.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-formhelpers.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.tablesorter.min.js"></script>
+
+	<script type="text/javascript" src="assets/js/custom-map.js"></script>
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+	<script type="text/javascript">
+		var _latitude = 34.708406;
+		var _longitude = 33.123837;
+		google.maps.event.addDomListener(window, 'load', initMap(_latitude,_longitude));        
+        function initMap(_latitude,_longitude){
+			var tribece = new google.maps.LatLng(_latitude,_longitude);
+
+			var map = new google.maps.Map(document.getElementById('map'), {
+				//center: {lat: 36.131712, lng: 27.114312},
+				center: tribece,
+				zoom: 7                
+			});                        
+            
+            var marker = new google.maps.Marker({
+				position: tribece,
+				map: map,
+				icon: 'assets/img/marker-h.png',
+				labelAnchor: new google.maps.Point(50, 0),
+				draggable: true
+			});
+            
+            //map.setCenter({lat: 35.708406, lng: 30.123837});
+
+			//$('#map').removeClass('fade-map');
+			google.maps.event.addListener(marker, "mouseup", function (event) {
+				var latitude = this.position.lat();
+				var longitude = this.position.lng();
+				$('#latitude').val( this.position.lat() );
+				$('#longitude').val( this.position.lng() );
+			});
+
+
+			//Autocomplete
+			var input = (document.getElementById('pac-input')); 
+          
+			var autocomplete = new google.maps.places.Autocomplete(input);
+			autocomplete.bindTo('bounds', map);
+
+			autocomplete.addListener('place_changed', function() {
+				marker.setVisible(false);
+				var place = autocomplete.getPlace();
+				if (!place.geometry) {
+					window.alert("No details available for input: '" + place.name + "'");
+					return;
+				}
+
+				if (place.geometry.viewport) {
+					map.fitBounds(place.geometry.viewport);
+				}else{
+					map.setCenter(place.geometry.location);
+					map.setZoom(17);
+				}
+
+				marker.setPosition(place.geometry.location);
+				marker.setVisible(true);
+				$('#latitude').val( marker.getPosition().lat() );
+				$('#longitude').val( marker.getPosition().lng() );
+
+				var address = '';
+				if (place.address_components) {
+					address = [
+					(place.address_components[0] && place.address_components[0].short_name || ''),
+					(place.address_components[1] && place.address_components[1].short_name || ''),
+					(place.address_components[2] && place.address_components[2].short_name || '')
+					].join(' ');
+				}
+			});
+
+			//geolocation
+			$('.btn_position').click(function (){
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(function(position) {
+						var pos = {
+							lat: position.coords.latitude,
+							lng: position.coords.longitude
+						};
+						marker.setPosition(pos);
+						marker.setVisible(true);
+						map.setCenter(pos);
+						$('#latitude').val( marker.getPosition().lat() );
+						$('#longitude').val( marker.getPosition().lng() );
+					}, function() {
+						handleLocationError(true, marker, map.getCenter());
+					});
+				}else{
+					handleLocationError(false, marker, map.getCenter());
+				}
+
+				function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+						marker.setPosition(pos);
+						marker.setContent(browserHasGeolocation ?
+											  'Error: The Geolocation service failed.' :
+											  'Error: Your browser doesn\'t support geolocation.');
+				}
+			});
+			var elevator = new google.maps.ElevationService;
+			map.addListener('click', function(event) {
+			  displayLocationElevation(event.latLng, elevator, marker);
+			});
+		}
+
+		function displayLocationElevation(location, elevator, marker) {
+			elevator.getElevationForLocations({
+				'locations': [location]
+			},function(results, status) {
+				marker.setPosition(location);
+				if (status === 'OK') {
+					if (results[0]) {
+						marker.setVisible(true);
+					}else{
+						marker.setContent('No results found');
+					}
+				} else {
+					marker.setContent('Elevation service failed due to: ' + status);
+				}
+			});
+		}
+		function success(position) {
+			initSubmitMap(position.coords.latitude, position.coords.longitude);
+			$('#latitude').val( position.coords.latitude );
+			$('#longitude').val( position.coords.longitude );
+		}
+	</script>
+</html>
