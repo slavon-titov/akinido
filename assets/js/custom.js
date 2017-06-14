@@ -548,6 +548,12 @@ $(document).ready(function($) {
 		$(this).closest('.prop_itm2').addClass('active').siblings().removeClass('active');
         return false;
 	});
+    
+     $("#my_prop .properties_click" ).click(function(e) {
+  		e.preventDefault();
+		$("#prop_details_click").trigger("click");
+        return false;
+	});
 
 	//graph
 	var barChartData = {
