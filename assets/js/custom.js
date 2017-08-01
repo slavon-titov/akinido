@@ -70,6 +70,9 @@ $(document).ready(function($) {
     $.get("modal_register.html", function(data){
       $('#register-modal-open').append(data);
     });
+    $.get("modal_restore_pass.html", function(data){
+      $('#modal-restore-open').append(data);
+    });
     $.get("modal_error_report.html", function(data){
       $('#error-modal-open').append(data);
     });
@@ -82,6 +85,10 @@ $(document).ready(function($) {
     $.get("modal_agency_xml.html", function(data){
       $('#agency-modal-xml').append(data);
     });
+    
+    $('#modal-restore-open').on('show.bs.modal', function (e) {        
+        $('#modal-login').modal('hide');
+    });    
 
 	$('.s_admin__box_content_tetragons._tabs .tetragon').click(function(){
 		var el = $(this),

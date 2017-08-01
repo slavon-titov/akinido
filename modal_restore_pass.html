@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modal log in</title>
+</head>
+<body>
+	<div id="modal-restore" class="modal" tabindex="-1" role="dialog" aria-labelledby="modal-restore" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header text-center">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h2>Forgot your password?</h2>
+					<span>Please provide your email below</span>
+				</div>
+				<form action="thank_you_page.html">
+					<div class="modal-body">
+						<div class="form-group">
+							<input type="text" name="user-email" placeholder="Email:" required>
+							<span class="fa fa-at"></span>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="form-group clearfix">							
+							<button type="submit" class="btn btn-primary">Restore password</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

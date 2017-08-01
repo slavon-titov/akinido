@@ -5,7 +5,7 @@
 	<title>Modal log in</title>
 </head>
 <body>
-	<div id="modal-login" class="modal" tabindex="-1">
+	<div id="modal-login" class="modal" tabindex="-1" role="dialog" aria-labelledby="modal-login" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header text-center">
@@ -31,7 +31,7 @@
 					<div class="modal-footer">
 						<div class="form-group clearfix">
 							<span>Don't have an account? <a href="#">Sign Up</a></span>
-							<span>Forgot your password? <a href="#">Restore</a></span>
+							<span>Forgot your password? <a href="#modal-restore" data-toggle="modal">Restore</a></span>
 							<button type="submit" class="btn btn-primary">Login</button>
 						</div>
 						<div>

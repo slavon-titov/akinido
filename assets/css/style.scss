@@ -6436,6 +6436,10 @@ figure {
   color: #1f2126;
 }
 
+input[type="number"] {
+    height: 55px;
+}
+
 /* line 24, ../scss/helpers/_forms.scss */
 .calendar select {
   width: calc(50% - 2px);
@@ -6622,31 +6626,31 @@ input[type="checkbox"] {
 
 /***** Modal Login-Registration-Error-XML-update*****/
 /* line 157, ../scss/helpers/_forms.scss */
-.modal-form h2, #modal-register h2, #modal-login h2, #modal-error h2 {
+.modal-form h2, #modal-register h2, #modal-login h2, #modal-error h2, #modal-restore h2 {
   font-size: 25px;
   margin-top: 8px;
 }
 /* line 161, ../scss/helpers/_forms.scss */
-.modal-form span, #modal-register span, #modal-login span, #modal-error span {
+.modal-form span, #modal-register span, #modal-login span, #modal-error span, #modal-restore span {
   font-weight: normal;
 }
 /* line 164, ../scss/helpers/_forms.scss */
-.modal-form .modal-header, #modal-register .modal-header, #modal-login .modal-header, #modal-error .modal-header {
+.modal-form .modal-header, #modal-register .modal-header, #modal-login .modal-header, #modal-error .modal-header, #modal-restore .modal-header{
   background: #f2f2f2;
   border-bottom: 0;
 }
 /* line 167, ../scss/helpers/_forms.scss */
-.modal-form .modal-header span, #modal-register .modal-header span, #modal-login .modal-header span, #modal-error .modal-header span {
+.modal-form .modal-header span, #modal-register .modal-header span, #modal-login .modal-header span, #modal-error .modal-header span, #modal-restore .modal-header span {
   color: #8c9397;
 }
 /* line 172, ../scss/helpers/_forms.scss */
-.modal-form .modal-body .form-group, #modal-register .modal-body .form-group, #modal-login .modal-body .form-group, #modal-error .modal-body .form-group {
+.modal-form .modal-body .form-group, #modal-register .modal-body .form-group, #modal-login .modal-body .form-group, #modal-error .modal-body .form-group, #modal-restore .modal-body .form-group {
   width: 100%;
   line-height: 41px;
   padding-left: 5px;
 }
 /* line 178, ../scss/helpers/_forms.scss */
-.modal-form .modal-footer, #modal-register .modal-footer, #modal-login .modal-footer, #modal-error .modal-footer {
+.modal-form .modal-footer, #modal-register .modal-footer, #modal-login .modal-footer, #modal-error .modal-footer, #modal-restore .modal-footer {
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 0;
@@ -6654,7 +6658,7 @@ input[type="checkbox"] {
   border-top: 0;
 }
 /* line 184, ../scss/helpers/_forms.scss */
-.modal-form .modal-footer span, #modal-register .modal-footer span, #modal-login .modal-footer span, #modal-error .modal-footer span {
+.modal-form .modal-footer span, #modal-register .modal-footer span, #modal-login .modal-footer span, #modal-error .modal-footer span, #modal-restore .modal-footer span {
   margin-bottom: 2px;
   text-align: right;
   font-size: 12px;
@@ -6662,19 +6666,19 @@ input[type="checkbox"] {
   color: #8c9397;
   float: left;
 }
-#modal-register .modal-footer span a, #modal-login .modal-footer span a {
+#modal-register .modal-footer span a, #modal-login .modal-footer span a, #modal-restore .modal-footer span a {
   color: #e41d34;
 }
 /* line 193, ../scss/helpers/_forms.scss */
-.modal-form label, #modal-register label, #modal-login label, #modal-error label {
+.modal-form label, #modal-register label, #modal-login label, #modal-error label, #modal-restore label {
   font-size: 15px;
   color: #35393b;
 }
 /* line 197, ../scss/helpers/_forms.scss */
-.modal-form .text-center, #modal-register .text-center, #modal-login .text-center, #modal-error .text-center {
+.modal-form .text-center, #modal-register .text-center, #modal-login .text-center, #modal-error .text-center #modal-restore .text-center {
   height: auto;
 }
-#modal-login .modal-header {
+#modal-login .modal-header, #modal-restore .modal-header {
   background: #ebebeb;
 }
 #modal-register .modal-header {
@@ -6695,6 +6699,10 @@ input[type="checkbox"] {
   padding: 10px 0;
   margin: 0 0 10px 0;
   outline: none;
+}
+
+#modal-restore .btn {
+    padding: 10px 15px;
 }
 
 /* line 207, ../scss/helpers/_forms.scss */
@@ -6764,9 +6772,14 @@ input[type="checkbox"] {
   padding-bottom: 5px;
   border-bottom: 1px solid #e6e6e6;
 }
+#modal-restore .modal-footer .form-group {
+    text-align: center;
+    padding-bottom: 30px;
+}
 /* line 263, ../scss/helpers/_forms.scss */
 #modal-register .modal-footer span.terms,
-#modal-login .modal-footer span.terms {
+#modal-login .modal-footer span.terms,
+#modal-restore .modal-footer span.terms {
   display: block;
   float: none;
   padding-bottom: 20px;
@@ -6826,34 +6839,34 @@ input[type="checkbox"] {
 }
 
 /* line 317, ../scss/helpers/_forms.scss */
-#modal-login .modal-dialog {
+#modal-login .modal-dialog, #modal-restore .modal-dialog {
   margin-top: 120px;
 }
 /* line 320, ../scss/helpers/_forms.scss */
-#modal-login label {
+#modal-login label, #modal-restore label {
   margin-bottom: 5px;
 }
 /* line 323, ../scss/helpers/_forms.scss */
-#modal-login .modal-body {
+#modal-login .modal-body, #modal-restore .modal-body {
   padding-bottom: 7px;
 }
 /* line 326, ../scss/helpers/_forms.scss */
-#modal-login .modal-body .form-group.social-login {
+#modal-login .modal-body .form-group.social-login, #modal-restore .modal-body .form-group.social-login {
   display: none;
   line-height: 54px;
 }
 /* line 329, ../scss/helpers/_forms.scss */
-#modal-login .modal-body .form-group:first-child {
+#modal-login .modal-body .form-group:first-child, #modal-restore .modal-body .form-group:first-child {
   margin-bottom: 20px;
   display: table;
 }
 /* line 332, ../scss/helpers/_forms.scss */
-#modal-login .modal-body .form-group:nth-child(2) {
+#modal-login .modal-body .form-group:nth-child(2), #modal-restore .modal-body .form-group:nth-child(2) {
   margin-bottom: 5px;
   display: table;
 }
 /* line 335, ../scss/helpers/_forms.scss */
-#modal-login .modal-body input {
+#modal-login .modal-body input, #modal-restore .modal-body input {
   outline: none;
 }
 /* line 336, ../scss/helpers/_forms.scss */
@@ -6866,12 +6879,21 @@ input[type="checkbox"] {
   color: #999 !important;
   /* ╤Ж╨▓╨╡╤В ╤В╨╡╨║╤Б╤В╨░ */
 }
+#modal-restore .modal-body input:-webkit-autofill {
+  -moz-box-shadow: inset 0 0 0 50px #fff !important;
+  -webkit-box-shadow: inset 0 0 0 50px #fff !important;
+  box-shadow: inset 0 0 0 50px #fff !important;
+  -webkit-text-fill-color: #999 !important;
+  /* ╤Ж╨▓╨╡╤В ╤В╨╡╨║╤Б╤В╨░ */
+  color: #999 !important;
+  /* ╤Ж╨▓╨╡╤В ╤В╨╡╨║╤Б╤В╨░ */
+}
 /* line 343, ../scss/helpers/_forms.scss */
-#modal-login .modal-footer span:first-child {
+#modal-login .modal-footer span:first-child, #modal-restore .modal-footer span:first-child {
   margin-top: 2px;
 }
 /* line 347, ../scss/helpers/_forms.scss */
-#modal-login .fa {
+#modal-login .fa, #modal-restore .fa {
   width: 15px;
   height: 15px;
   position: absolute;
@@ -6881,32 +6903,32 @@ input[type="checkbox"] {
   color: #ddd;
 }
 /* line 356, ../scss/helpers/_forms.scss */
-#modal-login .social-login {
+#modal-login .social-login, #modal-restore .social-login {
   text-transform: uppercase;
   font-size: 85%;
 }
 /* line 359, ../scss/helpers/_forms.scss */
-#modal-login .social-login .col-md-6 {
+#modal-login .social-login .col-md-6, #modal-restore .social-login .col-md-6 {
   padding: 0;
 }
 /* line 362, ../scss/helpers/_forms.scss */
-#modal-login .social-login .fa {
+#modal-login .social-login .fa, #modal-restore .social-login .fa {
   position: static;
   margin: 0 5px 0 0;
   font-size: 15px;
   color: inherit;
 }
 /* line 368, ../scss/helpers/_forms.scss */
-#modal-login .social-login .fb-login {
+#modal-login .social-login .fb-login, #modal-restore .social-login .fb-login {
   padding-right: 30px;
   color: #3b5998;
 }
 /* line 373, ../scss/helpers/_forms.scss */
-#modal-login .google-login {
+#modal-login .google-login, #modal-restore .google-login {
   color: #db5138;
 }
 /* line 375, ../scss/helpers/_forms.scss */
-#modal-login .google-login .fa {
+#modal-login .google-login .fa, #modal-restore .google-login .fa {
   margin-left: 5%;
 }
 
@@ -10295,33 +10317,33 @@ body {
   }
 
   /* line 1874, ../scss/helpers/_responsive.scss */
-  #modal-login .modal-footer span {
+  #modal-login .modal-footer span, #modal-restore .modal-footer span {
     float: none !important;
   }
 
   /* line 1878, ../scss/helpers/_responsive.scss */
-  #modal-login h2 {
+  #modal-login h2, #modal-restore h2 {
     font-size: 24px !important;
   }
   /* line 1881, ../scss/helpers/_responsive.scss */
-  #modal-login .btn {
+  #modal-login .btn, #modal-restore .btn {
     margin: 10px 0 10px 0 !important;
   }
   /* line 1884, ../scss/helpers/_responsive.scss */
-  #modal-login .modal-body {
+  #modal-login .modal-body, #modal-restore .modal-body {
     padding: 10px;
   }
   /* line 1886, ../scss/helpers/_responsive.scss */
-  #modal-login .modal-body .form-group {
+  #modal-login .modal-body .form-group, #modal-restore .modal-body .form-group {
     width: 100% !important;
   }
   /* line 1890, ../scss/helpers/_responsive.scss */
-  #modal-login .modal-dialog {
+  #modal-login .modal-dialog, #modal-restore .modal-dialog {
     margin-top: 10px !important;
     margin: 0;
   }
   /* line 1893, ../scss/helpers/_responsive.scss */
-  #modal-login .modal-dialog .form-group {
+  #modal-login .modal-dialog .form-group, #modal-restore .modal-dialog .form-group {
     text-align: left;
   }
 
