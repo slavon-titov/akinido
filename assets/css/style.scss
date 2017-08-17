@@ -2345,7 +2345,7 @@ figure {
 
 /* line 1355, ../scss/helpers/_classes.scss */
 .logo {
-  width: 170px;
+  width: 150px;
 }
 
 /* line 1358, ../scss/helpers/_classes.scss */
@@ -8794,7 +8794,7 @@ body {
   }
   /* line 464, ../scss/helpers/_responsive.scss */
   #page-content-search .container .wide_container_2 .selectize-input, #page-content-agent .container .wide_container_2 .selectize-input {
-    padding: 10px 0px 0 15px;
+    padding: 10px 0px 0 15px !important;
   }
   /* line 467, ../scss/helpers/_responsive.scss */
   #page-content-search .container .wide_container_2 .selectize-input:after, #page-content-search .container .wide_container_2 .selectize-input:after {
@@ -9917,11 +9917,12 @@ body {
   }
   /* line 1466, ../scss/helpers/_responsive.scss */
   #page-content-search .container .wide_container_2 .selectize-input, #page-content-agent .container .wide_container_2 .selectize-input {
-    padding: 5px 10px 0 10px;
+    padding: 10px 10px 0 10px !important;
   }
   /* line 1469, ../scss/helpers/_responsive.scss */
   #page-content-search .container .wide_container_2 .selectize-control.single .selectize-input:after {
-    right: 8px;
+    right: 5px;
+    top: 63%;
   }
   /* line 1472, ../scss/helpers/_responsive.scss */
   #page-content-search .container .wide_container_2 .select-block {
@@ -10378,7 +10379,7 @@ body {
   /***** page-content-search *****/
   /* line 1931, ../scss/helpers/_responsive.scss */
   #page-content-search .container .wide_container_2 .select-block .options-button {
-    padding: 6px 0% 6px 10px;
+    padding: 10px 0 10px 10px;
   }
   /* line 1935, ../scss/helpers/_responsive.scss */
   #page-content-search .container .wide_container_2 .pagination-lg {
